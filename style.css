@@ -6,6 +6,62 @@ body {
   width: auto;
   margin: auto; display: flex; flex-direction: column;
 }
+/* caracteristiques pour les petits ecrans max 480px */
+@media all and (max-device-width: 480px)
+{
+    
+aside {width: 100%; align-items: center;}
+aside a{width: 100%; position: left; text-align: left;}
+    
+article {width: 100%; flex-direction: column; align-items: center;}
+#section_2{flex-direction: column; align-items: center;}
+footer{flex-direction: column; text-align: center;}
+footer ul{padding-left: 40%;}
+#bloc_page {
+  flex-direction: column;
+  width: auto;
+  margin: auto;
+}
+
+#part_1{ display:flex; flex-direction: row; width: 100%;}
+
+#logo{width: 20%;}
+#logo img {width: 100px;
+  height: 70px;}
+
+#navigation li :last-child {color:blue; position:absolute;}
+
+#navigation a:hover{
+  text-decoration: underline; color: #0065fc; 
+  }
+#slogan {position: bottom; width: 100%; margin-top: 50px;}
+
+
+#part_2{float:center; }
+#rechercher{width: 100%;}
+.bouton {display: none; }
+
+#filtre {width: 100%;}
+
+a {flex-direction: column;}
+
+ nav ul
+  {
+      flex-direction: row-reverse;
+  }
+
+  nav li
+  {
+      padding-left: 4px;
+  }
+  
+  nav a
+  {
+      font-size: 1.1em;
+  }
+  #filtre {width: 30%; flex-wrap: wrap;}
+}
+/* fin du responsive*/
 
 h1 {
   font-size: 1.2em; text-align: left;
@@ -51,7 +107,7 @@ header {
 #navigation a:hover, #filtre a:hover {
   text-decoration: overline; color: #0065fc; 
   }
-  #navigation a:hover::before{width: 50px;}
+  #navigation a:hover: before{width: 50px;}
 
 #slogan{width:50%;}
 
