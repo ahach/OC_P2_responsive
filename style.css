@@ -9,7 +9,7 @@ body {
 /* caracteristiques générales de la page sur les petits ecrans max 480px */
 @media all and (max-device-width: 480px)
 {
-  #bloc_page {align-items: stretch; width: 80%; float: right;}
+  #bloc_page {align-items: stretch; width: 80%; float: center;}
  
 }
 /* fin du responsive sur le bloc_page*/
@@ -75,6 +75,11 @@ p {
 #logo{width: 20%;}
 #logo img {width: 100px;
   height: 70px;}
+
+  #navigation {width: 30%; display: flex; flex-direction: row-reverse; }
+
+  #navigation li :last-child {color: blue;}
+
 #navigation a:hover{
   text-decoration: underline; color: #0065fc; 
   }
@@ -180,7 +185,7 @@ article a {
 article img {width: 300px; height: 210px; border-radius: 15px; margin-bottom: 30px;}
 
 aside
-{ width:40%; display: flex; position: relative; flex-direction:column; display: inline-block;
+{ width:40%; display: flex; flex-direction:column; display: inline-block;
   background-color: #f2f2f2;
   justify-content: space-between;  align-content: center;
   margin-bottom: 5px;
@@ -204,14 +209,23 @@ aside a
 
 aside img {width: 200px; height: 220px; border-radius: 15px; float: left;}
 
-/*responsive section_1*/
+/*responsive section_1 pour ipad */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
 
+  article {width: fit-content;}
+  aside {width: fit-content;}
+  aside a
+  {
+  width: auto height: auto;
+}
+}
+/*responsive section_1 pour petites résulutions*/
 @media all and (max-device-width: 480px)
 {
 #section_1{flex-direction: column-reverse; align-items: center; width: fit-content;}
 article {width: fit-content; flex-direction: column; align-items: center;}
 aside {width: 100%; align-items: center;}
-aside a{width: 50%; position: justify; text-align: left;}
+aside a{width: auto; position: justify; text-align: left;}
 }
 /*fin du responsive section_1*/
 
@@ -261,7 +275,7 @@ footer li{display: flex; padding-left: 2px;}
 /*responsive footer*/
 @media all and (max-device-width: 480px)
 {
-footer{flex-direction: column; text-align: center; width:100%;}
-footer ul{padding-left: 40%;}
+footer{flex-direction: column; text-align: left; width:100%;}
+
 }
 /*fin du responsive footer*/
