@@ -216,7 +216,7 @@ aside img {width: 200px; height: 220px; border-radius: 15px; float: left;}
   aside {width: fit-content;}
   aside a
   {
-  width: auto height: auto;
+  width: auto; height: auto;
 }
 }
 /*responsive section_1 pour petites résulutions*/
