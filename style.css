@@ -6,62 +6,13 @@ body {
   width: auto;
   margin: auto; display: flex; flex-direction: column;
 }
-/* caracteristiques pour les petits ecrans max 480px */
+/* caracteristiques générales de la page sur les petits ecrans max 480px */
 @media all and (max-device-width: 480px)
 {
-    
-aside {width: 100%; align-items: center;}
-aside a{width: 100%; position: left; text-align: left;}
-    
-article {width: 100%; flex-direction: column; align-items: center;}
-#section_2{flex-direction: column; align-items: center;}
-footer{flex-direction: column; text-align: center;}
-footer ul{padding-left: 40%;}
-#bloc_page {
-  flex-direction: column;
-  width: auto;
-  margin: auto;
+  #bloc_page {align-items: stretch; width: 80%; float: right;}
+ 
 }
-
-#part_1{ display:flex; flex-direction: row; width: 100%;}
-
-#logo{width: 20%;}
-#logo img {width: 100px;
-  height: 70px;}
-
-#navigation li :last-child {color:blue; position:absolute;}
-
-#navigation a:hover{
-  text-decoration: underline; color: #0065fc; 
-  }
-#slogan {position: bottom; width: 100%; margin-top: 50px;}
-
-
-#part_2{float:center; }
-#rechercher{width: 100%;}
-.bouton {display: none; }
-
-#filtre {width: 100%;}
-
-a {flex-direction: column;}
-
- nav ul
-  {
-      flex-direction: row-reverse;
-  }
-
-  nav li
-  {
-      padding-left: 4px;
-  }
-  
-  nav a
-  {
-      font-size: 1.1em;
-  }
-  #filtre {width: 30%; flex-wrap: wrap;}
-}
-/* fin du responsive*/
+/* fin du responsive sur le bloc_page*/
 
 h1 {
   font-size: 1.2em; text-align: left;
@@ -70,6 +21,7 @@ h1 {
 p {
   font-family:"Raleway", sans-serif; font-size: 1em; text-align: left;
 }
+
 
 header {
   display: flex;
@@ -107,9 +59,27 @@ header {
 #navigation a:hover, #filtre a:hover {
   text-decoration: overline; color: #0065fc; 
   }
-  #navigation a:hover: before{width: 50px;}
 
 #slogan{width:50%;}
+
+/*responsive sur part_1 du header*/
+@media all and (max-device-width: 480px)
+{
+#part_1{ display:flex; width: 100%; height: fit-content;}
+h1 {
+  font-size: auto; text-align: center; width:100%;
+}
+p {
+   text-align: center;
+}
+#logo{width: 20%;}
+#logo img {width: 100px;
+  height: 70px;}
+#navigation a:hover{
+  text-decoration: underline; color: #0065fc; 
+  }
+  #slogan {width:100%; position: left;}
+}/* fin du responsive sur part_1*/
 
 #part_2 
 {
@@ -133,7 +103,7 @@ header {
   text-align: left;
   font-size: 20px; font-style: bolder;
 }
-
+/*règle specifique au bouton rechercher en fonction de la taille de l'écran*/
 .bouton {
   background-color: #0065fc; width: 130px;
   border: none;
@@ -143,6 +113,15 @@ header {
   color: white;
   border-radius: 0px 10px 10px 0px;
 }
+.loupe{display:none;}
+
+@media all and (max-device-width: 480px)/*règle responsive pour le bouton de recherche*/
+
+{
+.bouton{display:none;}
+.loupe{display: flex; color:white; background-color:#0065fc; 
+}
+} /*fin du responsive sur le bouton*/
 
 #filtre {
   display: flex; flex-direction:row; align-items: flex-start; flex-wrap: wrap; width: 90%;
@@ -154,13 +133,24 @@ padding-top:9px; padding-bottom:2px; padding-right: 20px; border:solid; border-w
   border-radius: 20px 20px 20px 20px; color: black; font-weight: bold;
 }
 #filtre .fas {color:#0065fc; background-color:#DEEBFF; 
- margin-right: 4px; margin-top:0px; margin-bottom: 2px ; padding:10px; border:5px;  border-radius: 20px 20px 20px 20px;
+ margin-right: 4px; margin-top:0px; margin-bottom: 2px ; padding:10px; border:5px; border-radius: 20px 20px 20px 20px;
 }
 #part_2 p i
 {
   background-color: white; border: 5px; border-radius: 20px 20px 20px 20px;}
 
- #section_1 .grey_star .fas {color:#f2f2f2;
+/*responsive sur part_2 du header*/
+@media all and (max-device-width: 480px)
+
+{
+  #part_2{flex-direction: column; float: center; height: fit-content;}
+  #filtre {flex-direction: column; display: inline-block; max-width: 80%; position:center;}
+  #flitre ul {flex-direction: column; display: inline-block; max-width: 80%; position:center;}
+}
+/* fin du responsive sur part_2 header*/
+
+ #section_1 .grey_star .fas {
+   color:#f2f2f2;
 }
 
 #section_1 {
@@ -214,6 +204,17 @@ aside a
 
 aside img {width: 200px; height: 220px; border-radius: 15px; float: left;}
 
+/*responsive section_1*/
+
+@media all and (max-device-width: 480px)
+{
+#section_1{flex-direction: column-reverse; align-items: center; width: fit-content;}
+article {width: fit-content; flex-direction: column; align-items: center;}
+aside {width: 100%; align-items: center;}
+aside a{width: 50%; position: justify; text-align: left;}
+}
+/*fin du responsive section_1*/
+
 #section_2 {
   display: flex; flex-direction: row; align-items: flex-start; margin-bottom: 20px; justify-content: space-between;
   padding-top: 20px; margin-left : 0px; align-content: stretch;
@@ -235,8 +236,16 @@ aside img {width: 200px; height: 220px; border-radius: 15px; float: left;}
   .petite_image{display: flex; flex-direction: column;}
   .grande_image{height:450px;}
   #section_2 .grande_image img {height:90%;}
+  /*responsive section_2*/
 
-  footer {
+@media all and (max-device-width: 480px)
+{
+#section_2{flex-direction: column; align-items: center; width: fit-content;}
+
+}
+/*fin du responsive section_2*/
+
+footer {
     background-color: #f2f2f2; 
     display: flex;
     justify-content: space-between;}
@@ -248,3 +257,11 @@ footer ul {
 }
 
 footer li{display: flex; padding-left: 2px;}
+
+/*responsive footer*/
+@media all and (max-device-width: 480px)
+{
+footer{flex-direction: column; text-align: center; width:100%;}
+footer ul{padding-left: 40%;}
+}
+/*fin du responsive footer*/
