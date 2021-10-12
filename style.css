@@ -14,7 +14,7 @@ body {
 }
 /* fin du responsive sur le bloc_page*/
 
-h1 {
+h1, h2{
   font-size: 1.2em; text-align: left;
 }
 
@@ -192,22 +192,15 @@ aside
   padding-top: 20px; padding-left: 20px;
   border-radius: 10px; margin-left: 20px;}
 
-#section_1 .chart .fas
-{
-  color:black;
-  background-color:#f2f2f2; margin-left: 20px;
-}
-aside h1{ display: flex; flex-direction: row; margin-left: 10px;}
-
 aside a
 {
   background-color: white; padding-top: 5px; display: flex; flex-direction: row; display: inline-block;
   padding-bottom: 0px; width: 500px; height: 230px;
-  padding-right: 30px; justify-content: stretch;
+  padding-right: 30px; 
   padding-left: 5px; margin-left: 30px; margin-right: 15px; margin-bottom: 10px; margin-top: 10px;border-radius: 15px;
   text-decoration: none; color:black;}
 
-aside img {width: 200px; height: 220px; border-radius: 15px; float: left;}
+aside img {width: 200px; height: 220px; border-radius: 15px; float: left; margin-right: 15px;}
 
 /*responsive section_1 pour ipad */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
@@ -230,14 +223,13 @@ aside a{width: auto; position: justify; text-align: left;}
 /*fin du responsive section_1*/
 
 #section_2 {
-  display: flex; flex-direction: row; align-items: flex-start; margin-bottom: 20px; justify-content: space-between;
-  padding-top: 20px; margin-left : 0px; align-content: stretch;
+  display: flex; flex-direction: row; margin-bottom: 20px; justify-content: space-between;
+  padding-top: 20px; margin-left : 0px; align-content: stretch; 
 }
 
-#section_2 a {display: flex; text-decoration: none; color:black; text-align: left;  padding-bottom: 10px;
+#section_2 a {flex-direction: flex-start; display: flex; display: inline-block; text-decoration: none; color:black; text-align: left;  padding-bottom: 10px;
   padding-right: 5px;
-  padding-left: 5px; margin-left: 4px; margin-right:4px; margin-bottom: 10px; margin-top: 10px; border-width: 15px; border-radius: 20px;
-  display: inline-block; 
+  padding-left: 5px; margin-left: 4px; margin-right:4px; margin-bottom: 10px; margin-top: 10px; border-width: 15px; border-radius: 20px; 
   border:1px none grey; box-shadow: 5px 5px 5px #f2f2f2; }
 
 #section_2 img
