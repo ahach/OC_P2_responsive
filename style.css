@@ -40,15 +40,14 @@ header {
   display: flex; 
   width: 100%; 
   height: 150px; 
-  flex-direction: row; 
-  flex-wrap: wrap;
+  flex-direction: row; flex-wrap: wrap;
   justify-content: space-between; 
   margin-bottom: 20px;
   padding-top: 50px; 
 }
 
 .logo {
-  width:50%
+  width:60%
 }
 
 .logo img {
@@ -59,66 +58,64 @@ header {
 }
 
 .navigation {
-  width: 50%; 
-  float:right; 
-  justify-content: stretch; 
-  float:right; padding-top: 20px; border-top: #0065fc; border-top: 20rem;
+  width: 40%; float:right; margin-right: 0%;
+  display: flex;
+  flex-direction: row;
+   padding-top: 20px; border-top: #0065fc; border-top: 20rem;
 }
 .navigation ul, .filtre ul {
-    display: flex; 
-    list-style-type: none; 
+    display: flex; justify-content: space-around;
+    list-style-type: none; margin-right: 0%;
     color: grey; 
-    justify-content: right; 
    
   }
-.navigation li {
-    margin-right: 15px; 
-  }
-    
-.navigation a , .filtre a {
+  .menu_responsive {display: flex; flex-direction: row; justify-content: space-between;}
+
+    .navigation a , .filtre a {
     color: grey; text-decoration: none;
     width: 60%;
     justify-content: space-between; padding-top: 25px;
     
   }
+  .navigation a{ float: right; padding-left: 40px; padding-right: 40px; text-align: right;}
+
   .navigation a:hover {
     border-top: solid; 
     border-width: 1px; 
     border-color:#0065fc; background-color:white; color: #0065fc;
-    padding: 30px;
+    padding-top: 30px;
     }
 
 .slogan {
-  width:50%;
+  width:50%; margin-bottom:30px;
 }
 
 /*responsive sur part_1 du header*/
 @media all and (max-width: 480px)
 {
 .head_bloc_1 {
-  display:flex; 
+  display:flex; flex-wrap: none;
   width: 100%; 
-  height: fit-content;
+  height: 60%;
 }
 h1 {
-  text-align: center; width:100%;
+  text-align: left; width:100%;
 }
 p {
    text-align: center;
 }
 .logo{
-  width: 20%;
+  width: 30%;
 }
 .logo img {
   width: 100px;
   height: 70px;
 }
-.navigation {
-  width: 30%; 
-  display: flex; 
-  flex-direction: row-reverse;
-
+.navigation { 
+  display: flex; flex-direction: column; width: 70%; flex-wrap: wrap;
 }
+.subscribe {width: 100%; height: 50px;}
+.menu_responsive {display: flex; flex-direction: row; width: 100%;}
 
 .slogan {
   width:100%; 
@@ -426,13 +423,13 @@ aside a{
 footer {
     background-color: #f2f2f2; 
     display: flex;
-    justify-content: space-between; margin-left:0; margin-right:0;
+    justify-content: space-between; margin-left:0; margin-right:0; 
   }
 
 footer ul {
   list-style-type: none;
   color: grey;
-  text-decoration: none; display: flex; flex-direction: column; margin-left: 0;
+  text-decoration: none; display: flex; flex-direction: column;
 }
 
 footer li {
