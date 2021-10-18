@@ -4,8 +4,8 @@ body {
   font-size: 1.2em;
 }
 #bloc_page {
-  width: auto;
-  margin: auto; 
+  width: 100%;
+  margin: auto;
   display: flex; 
   flex-direction: column;
 }
@@ -22,6 +22,10 @@ h1, h2 {
   font-size: 1.2em; 
   text-align: left;
 }
+
+h2 {
+   margin-left: 1.6em;}
+
 p {
   font-family:"Raleway", sans-serif; 
   font-size: 1em; 
@@ -57,30 +61,32 @@ header {
 .navigation {
   width: 50%; 
   float:right; 
-  justify-content: space-around; 
-  float:right;
+  justify-content: stretch; 
+  float:right; padding-top: 20px; border-top: #0065fc; border-top: 20rem;
 }
-
 .navigation ul, .filtre ul {
     display: flex; 
     list-style-type: none; 
     color: grey; 
-    justify-content: right;
+    justify-content: right; 
+   
   }
 .navigation li {
-    margin-right: 15px;
+    margin-right: 15px; 
   }
-  
+    
 .navigation a , .filtre a {
-    color: grey; 
+    color: grey; text-decoration: none;
     width: 60%;
-    justify-content: space-between;
-    text-decoration: none;
+    justify-content: space-between; padding-top: 25px;
+    
   }
-
-.navigation a:hover, .filtre a:hover {
-  text-decoration: overline; color: #0065fc; 
-  }
+  .navigation a:hover {
+    border-top: solid; 
+    border-width: 1px; 
+    border-color:#0065fc; background-color:white; color: #0065fc;
+    padding: 30px;
+    }
 
 .slogan {
   width:50%;
@@ -113,10 +119,7 @@ p {
   flex-direction: row-reverse;
 
 }
-.navigation a:hover{
-  text-decoration: underline; 
-  color: #0065fc; 
-  }
+
 .slogan {
   width:100%; 
   float: left;
@@ -132,7 +135,7 @@ p {
 .rechercher {
   display: flex; 
   flex-direction: row; 
-  width: 60%;
+  width: 60%; margin-top: 25px;
   align-items: center;
   justify-content: left;
 }
@@ -210,6 +213,8 @@ border-radius: 20px 20px 20px 20px;
 color: black; 
 font-weight: bold;
 }
+.filtre li :hover{ background-color: #0065fc; color:#f2f2f2;}
+
 .filtre .fas {
   color:#0065fc; 
   background-color:#DEEBFF; 
@@ -375,27 +380,26 @@ aside a{
 .section_2 {
   display: flex; 
   flex-direction: row; 
-  margin-bottom: 20px; 
+  margin-bottom: 10px; 
   justify-content: space-between;
   padding-top: 20px; 
-  margin-left : 0px;
 }
 
 .section_2 a {display: flex; 
-  display: inline-block; 
+  display: inline-block;
   text-decoration: none; 
   color:black; 
-  text-align: left;
-  padding-bottom: 10px;
-  margin-left: 4px; margin-bottom: 10px; border-width : 15px; border-radius: 20px; 
+  text-align: center;
+  padding-bottom: 2px;
+  margin-left: 20px; margin-bottom: 10px; border-width : 15px; border-radius: 20px;
   border:1px none grey; box-shadow: 5px 5px 5px #f2f2f2; }
 
 .section_2 img
 { height: 180px; width: 300px; border-width: 10px 10px 5px 0; border-radius: 20px;
   padding-top: 0px;
-  padding-bottom: 45px;
-  padding-right: 0px;
-  padding-left: 0px; 
+  padding-bottom: 15px;
+  padding-right: 0px; margin-bottom: 15px;
+  padding-left: 0px; margin-left: 20px;
   }
   .petite_image
   {
@@ -411,7 +415,7 @@ aside a{
 
 @media all and (max-width: 480px)
 {
-.section_2{
+.section_2 {
   flex-direction: column; 
   align-items: center; 
   width: fit-content;
@@ -422,18 +426,18 @@ aside a{
 footer {
     background-color: #f2f2f2; 
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; margin-left:0; margin-right:0;
   }
 
 footer ul {
   list-style-type: none;
   color: grey;
-  text-decoration: none; display: flex; flex-direction: column; margin-left: 0%; padding-left: 0%;
+  text-decoration: none; display: flex; flex-direction: column; margin-left: 0;
 }
 
-footer li{
+footer li {
   display: flex; 
-  padding-left: 2px;
+  margin-left: 0;
 }
 
 /*responsive footer*/
@@ -441,8 +445,7 @@ footer li{
 {
 footer{
   flex-direction: column; 
-  text-align: left; 
-  width:100%;}
-
+  text-align: left;
+}
 }
 /*fin du responsive footer*/
