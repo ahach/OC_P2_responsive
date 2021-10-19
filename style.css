@@ -94,28 +94,26 @@ header {
 @media all and (max-width: 480px)
 {
 .head_bloc_1 {
-  display:flex; flex-wrap: none;
+  display:flex;
   width: 100%; 
-  height: 60%;
+  height: 60%; padding-top: none; justify-content: space-evenly;
 }
+
+.navigation ul{flex-wrap: wrap-reverse; margin-right: 20%;}
+.menu_responsive {display: flex; flex-direction: row; margin-left: 0; margin-right: 80%; float: left;}
+
 h1 {
   text-align: left; width:100%;
 }
 p {
    text-align: center;
 }
-.logo{
-  width: 30%;
-}
+
 .logo img {
   width: 100px;
   height: 70px;
 }
-.navigation { 
-  display: flex; flex-direction: column; width: 70%; flex-wrap: wrap;
-}
-.subscribe {width: 100%; height: 50px;}
-.menu_responsive {display: flex; flex-direction: row; width: 100%;}
+
 
 .slogan {
   width:100%; 
