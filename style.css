@@ -216,6 +216,7 @@ font-weight: bold;
   width: 480px; height: 70px; justify-content: stretch; margin-top: 100px;
 }
 .zone_recherche{margin-top: 50px;}
+
 }
 
 @media all and (max-width: 480px)
@@ -227,11 +228,14 @@ font-weight: bold;
 .rechercher {
   width: 480px; height: 70px; justify-content: stretch;
 }
-  .filtre {align-items: left;}
-  .filtre ul { display: flex;;
-    flex-direction: row; flex-wrap: wrap; margin-left: 0%; margin-left: 0%;
-      }
-      .romantic{display: inline-block;}
+  .filtre {align-items: left; width: 100%;}
+  .filtre ul { display: flex; width: 85%;
+    flex-direction: row; flex-wrap: wrap; justify-content: space-between; margin:20px;
+  }  
+  .filtre a {margin-left: 0%;}
+
+.romantique {margin-right: 40%;}
+.animaux{margin-right: 30%;}
 }
 /* fin du responsive sur part_2 header*/
 
@@ -327,10 +331,10 @@ aside img {width: 200px; height: 220px; border-radius: 15px; float: left; margin
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
 
   article {
-    width: auto;
+    width: 100%;
   }
   aside {
-    width: auto;
+    width: 100%;
   }
   aside a
   {
@@ -343,16 +347,16 @@ aside img {width: 200px; height: 220px; border-radius: 15px; float: left; margin
 .section_1{
   flex-direction: column-reverse; 
   align-items: center; 
-  width: fit-content;
+  width: fit-content; margin-left: 30px;
 }
 article {
-  width: fit-content; 
+  width: 100%;
   flex-direction: column; 
   align-items: center;
 }
 aside {
   width: 100%; 
-  align-items: center;
+  align-items: center; margin-left: 0%;
 }
 aside a{
   width: auto; 
