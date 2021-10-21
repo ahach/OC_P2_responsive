@@ -177,9 +177,9 @@ margin-left: 0%; width: 100%; height: 90px; margin-right: 0%; margin-bottom: 20p
 } /*fin du responsive sur le bouton*/
 
 .filtre {
-  display: flex; margin-left: 0px;
+  display: flex; margin-left: 0px; margin-right: 500px;
   flex-direction:row; 
-  align-items: flex-start; 
+  align-items: flex-start; justify-content: stretch;
   flex-wrap: wrap; 
   width: 70%;
 }
@@ -234,21 +234,21 @@ font-weight: bold;
 }
 .zone_recherche{padding-left: 5px;}
 
-}  .filtre {align-items: left; width: 100%; margin: left 0px;
+}  .filtre {align-items: left; width: 100%; margin-left : 0px; margin-right: 0px;
   }
 
   .filtre ul { display: flex; width: 80%;
    flex-wrap: wrap; justify-content: space-between;
   }  
-  .filtre li {margin-left: 0%;}
-  
+  .filtre li {margin-left: 0%;
+  }
 }
 /* fin du responsive sur part_2 header*/
 
- .section_1 .grey_star .fas {
+ .section_1 .grey_star .fas 
+{
    color:#f2f2f2;
 }
-
 .section_1 {
   display: flex; 
   width: 100%; 
@@ -333,6 +333,7 @@ aside a
 
 aside img {width: 200px; height: 220px; border-radius: 15px; float: left; margin-right: 15px;}
 
+
 /*responsive section_1 pour ipad */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
 
@@ -353,10 +354,10 @@ aside img {width: 200px; height: 220px; border-radius: 15px; float: left; margin
 .section_1{
   flex-direction: column-reverse; 
   align-items: center; 
-  width: fit-content; margin-left: 30px;
+  width: 100%; margin-left: 20px;
 }
 article {
-  width: 100%;
+  width: 100%; margin-left:0%; margin-right: 0%;
   flex-direction: column; 
   align-items: center; background:none;
 }
@@ -365,25 +366,30 @@ article a
   padding-top: 0px;
   padding-bottom: 15px;
   padding-right: 0px; margin-bottom: 15px;
-  padding-left: 0px; margin-left: 20px; box-shadow: 5px 5px 5px #f2f2f2; border: 1px none grey;
+  padding-left: 0px; box-shadow: 5px 5px 5px #f2f2f2; border: 1px none grey;
 }
-  .article img
-  { height: 80%; width: 100%; border-width: 10px 10px 5px 0; border-radius: 20px;
+article img
+  { height: 210px; width: 95%; border-width: 10px 10px 5px 0; border-radius: 20px;
     padding-top: 0px;
     padding-bottom: 15px;
     padding-right: 0px; margin-bottom: 15px;
-    padding-left: 0px; margin-left: 20px;
+    padding-left: 0px; margin-left: 20px; margin-right: 0%;
     }
 
 aside {
   width: 100%; 
-  align-items: center; margin-left: 10%;
+  align-items: center;
 }
 aside a{
   width: auto; 
-  text-align: left; margin-left: 0px;
+  text-align: left; margin-left: 0px; float: left; justify-content: space-around;
 }
+aside img {
+  border-radius:15px,0px,0px,15px;}
+
+aside h2 .fas{float: right; margin-bottom: 10px;}
 }
+
 /*fin du responsive section_1*/
 
 .section_2 {
@@ -391,7 +397,7 @@ aside a{
   flex-direction: row; 
   margin-bottom: 10px; 
   justify-content: space-between;
-  padding-top: 20px; 
+  padding-top: 20px; align-items: center;
 }
 .section_2 a {display: flex; 
   display: inline-block;
@@ -413,10 +419,10 @@ aside a{
     display: flex; flex-direction: column;
   }
   .grande_image{
-    height:450px;
+    height: 400px;
   }
   .section_2 .grande_image img {
-    height:90%;
+    height:80%;
   }
     /*responsive section_2*/
 
@@ -425,18 +431,23 @@ aside a{
 .section_2 {
   flex-direction: column; 
   align-items: center; 
-  width: 100%; margin-left: 20px;
+  width: 90%;
 }
-.section_2 a {width: 365px; height: 310px;}
-.section_2 img {width: 90%;}
-.grande_image{height: 180px; width: 300px}
+.section_2 a {width: 440px; height: 321px; justify-content: space-between; margin-left: 90px; padding-left:0px; margin-right: 20px; margin-bottom: 20px; text-align: left;}
+.section_2 img {height: 210px; width: 90%; margin-left: 50px;}
+.grande_image{
+  height: 321px;
+}
+.section_2 .grande_image img {
+  height:210px; margin-left:40px; width: 90%;
+}
 }
 /*fin du responsive section_2*/
 
 footer {
-    background-color: #f2f2f2; 
+    background-color: #f2f2f2; width: 100%;
     display: flex;
-    justify-content: space-between; margin-right:0; 
+    justify-content: space-between; margin: right 0px; padding-right: 40px;
   }
 
 footer ul {
