@@ -83,6 +83,10 @@ header {
 
 @media all and (max-width: 599px)
 {
+  #bloc_page {
+    width: 95%;
+    margin-left: 30px;
+  }
 header {
   margin-left: 20px;
 }
@@ -105,7 +109,7 @@ header {
   }
 
 .slogan {
-margin-left: 0%; width: 100%; height: 90px; margin-right: 0%; margin-bottom: 20px;}
+width: 100%; height: 90px; margin-right: 0%; margin-bottom: 20px;}
 
 }/* fin du responsive sur bloc_1*/
 
@@ -227,17 +231,17 @@ font-weight: bold;
 {
   .head_bloc_2
   { float: none; 
-    height: max-content; width: 480px; }
+    height: max-content;}
 
 .rechercher {
   width: 480px; height: 70px; justify-items: flex-start; margin-top:0px;
 }
 .zone_recherche{padding-left: 5px;}
 
-}  .filtre {align-items: left; width: 100%; margin-left : 0px; margin-right: 0px;
+ .filtre {align-items: left; width: 100%; margin-left : 0px; margin-right: 0px; width: 499px;/*ajuster ici la largeur du header pour que la zone recherche soit alignée*/
   }
 
-  .filtre ul { display: flex; width: 80%;
+  .filtre ul { display: flex; width: 80%; margin-left : 0px;
    flex-wrap: wrap; justify-content: space-between;
   }  
   .filtre li {margin-left: 0%;
@@ -261,7 +265,7 @@ font-weight: bold;
   color:#0065fc;
 }
 span {
-  font-weight: bolder;
+  font-weight: bolder; float: bottom;
 }
 
 article
@@ -287,8 +291,9 @@ article a {
   flex-direction: column;
   padding-bottom: 5px;
   padding-right: 5px;
-  padding-left: 5px; margin-left: 5px; margin-right: 5px; margin-bottom: 30px; margin-top: 10px;border-radius: 15px; 
+  padding-left: 5px; margin-left: 20px; margin-right: 20px; margin-bottom: 30px; margin-top: 5px; border-radius: 15px; border:5px none grey; box-shadow: 10px 10px 10px #f2f2f2;
   text-decoration: none; color:black; text-align: left;}
+
 
 .star {
   display: flex; 
@@ -308,7 +313,7 @@ aside
   justify-content: space-between;
   align-content: center;
   margin-bottom: 5px;
-  padding-top: 20px; padding-left: 20px;
+  padding-top: 20px; padding-left: 20px; padding-bottom: 20px;
   border-radius: 10px; margin-left: 20px;}
 
 aside a
@@ -319,20 +324,21 @@ aside a
   flex-direction: row;
   display: inline-block;
   padding-bottom: 0px; 
-  width: 500px; 
-  height: 230px;
-  padding-right: 30px; 
+  width: 70%; 
+  height: 25%;
+  padding-right: 25px; 
   padding-left: 5px; 
   margin-left: 30px; 
   margin-right: 15px; 
-  margin-bottom: 10px; 
+  margin-bottom: 35px; 
   margin-top: 10px;
   border-radius: 15px;
+  border:1px none grey; box-shadow: 5px 5px 5px #f2f2f2;
   text-decoration: none; 
   color:black;}
 
-aside img {width: 200px; height: 220px; border-radius: 15px; float: left; margin-right: 15px;}
-
+aside img {width: 200px; height: 95%; border-radius: 15px 0px 0px 15px; float: left; margin-right: 15px;}
+aside .star{ margin-top:30%;}
 
 /*responsive section_1 pour ipad */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
@@ -354,7 +360,7 @@ aside img {width: 200px; height: 220px; border-radius: 15px; float: left; margin
 .section_1{
   flex-direction: column-reverse; 
   align-items: center; 
-  width: 100%; margin-left: 20px;
+  width: 100%;
 }
 article {
   width: 100%; margin-left:0%; margin-right: 0%;
@@ -366,23 +372,22 @@ article a
   padding-top: 0px;
   padding-bottom: 15px;
   padding-right: 0px; margin-bottom: 15px;
-  padding-left: 0px; box-shadow: 5px 5px 5px #f2f2f2; border: 1px none grey;
+ box-shadow: 5px 5px 5px #f2f2f2; border: 1px none grey;
 }
 article img
   { height: 210px; width: 95%; border-width: 10px 10px 5px 0; border-radius: 20px;
     padding-top: 0px;
     padding-bottom: 15px;
     padding-right: 0px; margin-bottom: 15px;
-    padding-left: 0px; margin-left: 20px; margin-right: 0%;
+    padding-left: 0px; margin-right: 0%;
     }
 
 aside {
   width: 100%; 
-  align-items: center;
+  align-items: center; padding-right: 80px; margin-left: 70px; padding-left: 0px;
 }
 aside a{
-  width: auto; 
-  text-align: left; margin-left: 0px; float: left; justify-content: space-around;
+  text-align: left; margin-left: 0px; justify-content: space-around; width:95%; height: 40%;/*verifier propriété modifiée ici*/
 }
 aside img {
   border-radius:15px,0px,0px,15px;}
@@ -403,15 +408,18 @@ aside h2 .fas{float: right; margin-bottom: 10px;}
   display: inline-block;
   text-decoration: none; 
   color:black; 
-  text-align: center;
   padding-bottom: 2px;
   margin-left: 20px; margin-bottom: 10px; border-width : 15px; border-radius: 20px;
   border:1px none grey; box-shadow: 5px 5px 5px #f2f2f2; }
+
+.section_2 span{
+margin-left: 20px;
+}
 .section_2 img
 { height: 180px; width: 300px; border-width: 10px 10px 5px 0; border-radius: 20px;
   padding-top: 0px;
   padding-bottom: 15px;
-  padding-right: 0px; margin-bottom: 15px;
+  padding-right: 0px;
   padding-left: 0px; margin-left: 20px;
   }
   .petite_image
@@ -419,7 +427,7 @@ aside h2 .fas{float: right; margin-bottom: 10px;}
     display: flex; flex-direction: column;
   }
   .grande_image{
-    height: 400px;
+    height: 470px;
   }
   .section_2 .grande_image img {
     height:80%;
@@ -433,8 +441,9 @@ aside h2 .fas{float: right; margin-bottom: 10px;}
   align-items: center; 
   width: 90%;
 }
-.section_2 a {width: 440px; height: 321px; justify-content: space-between; margin-left: 90px; padding-left:0px; margin-right: 20px; margin-bottom: 20px; text-align: left;}
+.section_2 a {width: 440px; height: 321px; justify-content: space-between; margin-left: 90px; padding-left:0px; margin-right: 20px; margin-bottom: 20px;}
 .section_2 img {height: 210px; width: 90%; margin-left: 50px;}
+.section_2 span {padding-left: 30px;}
 .grande_image{
   height: 321px;
 }
@@ -457,7 +466,7 @@ footer ul {
 }
 
 footer li {
-  display: flex; 
+  display: flex; padding-bottom: 15px;
   margin-left: 0;
 }
 
