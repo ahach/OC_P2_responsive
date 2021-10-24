@@ -85,7 +85,7 @@ header {
 {
   #bloc_page {
     width: 95%;
-    margin-left: 30px;
+    margin-left: 15%;
   }
 header {
   margin-left: 20px;
@@ -230,7 +230,7 @@ font-weight: bold;
 @media all and (max-width: 480px)
 {
   .head_bloc_2
-  { float: none; 
+  { float: none; width: 480px;
     height: max-content;}
 
 .rechercher {
@@ -238,7 +238,7 @@ font-weight: bold;
 }
 .zone_recherche{padding-left: 5px;}
 
- .filtre {align-items: left; width: 100%; margin-left : 0px; margin-right: 0px; width: 499px;/*ajuster ici la largeur du header pour que la zone recherche soit alignée*/
+ .filtre {align-items: left; width: 100%; margin-left : 0px; margin-right: 0px;
   }
 
   .filtre ul { display: flex; width: 80%; margin-left : 0px;
@@ -360,22 +360,22 @@ aside .star{ margin-top:30%;}
 .section_1{
   flex-direction: column-reverse; 
   align-items: center; 
-  width: 100%;
+  width: 100%; 
 }
 article {
-  width: 100%; margin-left:0%; margin-right: 0%;
+  width: 400px; margin-left:20%; margin-right: 0%;
   flex-direction: column; 
   align-items: center; background:none;
 }
-article a
-{ border-width: 10px 10px 5px 0; border-radius: 20px; width: 100%;
+article a, .section_2 a
+{ border-width: 10px 10px 5px 0; border-radius: 20px; width: 460px;
   padding-top: 0px;
   padding-bottom: 15px;
-  padding-right: 0px; margin-bottom: 15px;
+  padding-right: 0px; margin-bottom: 15px; 
  box-shadow: 5px 5px 5px #f2f2f2; border: 1px none grey;
 }
 article img
-  { height: 210px; width: 95%; border-width: 10px 10px 5px 0; border-radius: 20px;
+  { height: 210px; width: 100%; border-width: 10px 10px 5px 0; border-radius: 20px;
     padding-top: 0px;
     padding-bottom: 15px;
     padding-right: 0px; margin-bottom: 15px;
@@ -383,11 +383,11 @@ article img
     }
 
 aside {
-  width: 100%; 
-  align-items: center; padding-right: 80px; margin-left: 70px; padding-left: 0px;
+  width: 400px; 
+  align-items: center; padding-right: 80px; margin-left: 50%; padding-left: 0px;
 }
 aside a{
-  text-align: left; margin-left: 0px; justify-content: space-around; width:95%; height: 40%;/*verifier propriété modifiée ici*/
+  text-align: left; margin-left: 10%; justify-content: space-around; width:95%; height: 40%;
 }
 aside img {
   border-radius:15px,0px,0px,15px;}
@@ -439,16 +439,13 @@ margin-left: 20px;
 .section_2 {
   flex-direction: column; 
   align-items: center; 
-  width: 90%;
+  width: 480px;
 }
-.section_2 a {width: 440px; height: 321px; justify-content: space-between; margin-left: 90px; padding-left:0px; margin-right: 20px; margin-bottom: 20px;}
-.section_2 img {height: 210px; width: 90%; margin-left: 50px;}
+.section_2 a {width: 480px; height: 321px; justify-content: space-between; padding-left:0px;  margin-bottom: 20px;}
+.section_2 img, .grande_image img {height: 210px; width: 95%;}
 .section_2 span {padding-left: 30px;}
 .grande_image{
   height: 321px;
-}
-.section_2 .grande_image img {
-  height:210px; margin-left:40px; width: 90%;
 }
 }
 /*fin du responsive section_2*/
@@ -456,7 +453,7 @@ margin-left: 20px;
 footer {
     background-color: #f2f2f2; width: 100%;
     display: flex;
-    justify-content: space-between; margin: right 0px; padding-right: 40px;
+    justify-content: space-between; margin: right 0px; 
   }
 
 footer ul {
@@ -474,8 +471,8 @@ footer li {
 @media all and (max-width: 480px)
 {
 footer{
-  flex-direction: column; 
-  text-align: left;
+  flex-direction: column; width: 100%;
+  text-align: left; padding-right: 45%; margin-left: 10px;
 }
 }
 /*fin du responsive footer*/
