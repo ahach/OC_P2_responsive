@@ -54,11 +54,11 @@ header {
   flex-direction: row;
 }
 .navigation ul, .filtre ul {
-    display: flex; justify-content: space-around;
+    display: flex; justify-content: space-around; width: 100%;
     list-style-type: none; margin-right: 0%; flex-direction: row;
-    color: grey; width: 100%;
-   
-  }
+    color: grey; 
+     }
+     .navigation ul{width: 100%;}
     .navigation a , .filtre a {
     color: grey; text-decoration: none;
     width: 60%;
@@ -99,7 +99,7 @@ header {
   height: 70px;
 }
 .navigation ul{flex-wrap: wrap-reverse; margin-right: 20%;}
-.menu_responsive {display: flex; flex-direction: row; margin-left: 0; margin-right: 80%; float: left;}
+
 .navigation a:hover {
   border-bottom: solid; border-top:none;
   border-width: 1px; 
