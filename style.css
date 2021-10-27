@@ -55,12 +55,10 @@ header {
 }
 .navigation ul, .filtre ul {
     display: flex; justify-content: space-around;
-    list-style-type: none; margin-right: 0%;
-    color: grey; 
+    list-style-type: none; margin-right: 0%; flex-direction: row;
+    color: grey; width: 100%;
    
   }
-  .menu_responsive {display: flex; flex-direction: row; justify-content: space-between;}
-
     .navigation a , .filtre a {
     color: grey; text-decoration: none;
     width: 60%;
