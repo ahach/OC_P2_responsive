@@ -49,16 +49,16 @@ header {
 }
 
 .navigation {
-  width: 40%; float:right; margin-right: 0%;
+  width: 40%; float:right;
   display: flex;
   flex-direction: row;
 }
 .navigation ul, .filtre ul {
     display: flex; justify-content: space-around; width: 100%;
-    list-style-type: none; margin-right: 0%; flex-direction: row;
+    list-style-type: none; flex-direction: row;
     color: grey; 
      }
-     .navigation ul{width: 100%;}
+  
     .navigation a , .filtre a {
     color: grey; text-decoration: none;
     width: 60%;
@@ -80,26 +80,28 @@ header {
 
 /*responsive sur bloc_1 du header*/
 
-@media all and (max-width: 599px)
+@media all and (max-width: 480px)
 {
   #bloc_page {
     width: 95%;
     margin-left: 15%;
   }
-header {
-  margin-left: 20px;
-}
-
 .head_bloc_1 {
-  display:flex; 
-  height: 60%; padding-top: none; justify-content: space-evenly;
+  display:flex; flex-direction: row;
+  height: 100%; padding-top: none; justify-content: space-evenly;
+}
+.logo {
+  width: 65%; height: 50%;
 }
 .logo img {
-  width: 100px;
+  width: 100px; position:absolute; margin-left: 15%; margin-top: 15%; 
   height: 70px;
 }
-.navigation ul{flex-wrap: wrap-reverse; margin-right: 20%;}
-
+.navigation{height: 50%; width: 100%;}
+.navigation ul{flex-wrap: wrap-reverse;}
+.hebergements{float: left;margin-top:23%; margin-left:0px;}
+.activites{float: right;position: fixed; margin-top:8%;}
+.subscribe{position: fixed; margin-bottom: 30%;}
 .navigation a:hover {
   border-bottom: solid; border-top:none;
   border-width: 1px; 
