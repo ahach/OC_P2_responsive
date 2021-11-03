@@ -88,7 +88,7 @@ header {
   }
 .head_bloc_1 {
   display:flex; flex-direction: row;
-  height: 100%; padding-top: none; justify-content: space-evenly;
+  height: 100%; justify-content: space-evenly;
 }
 .logo {
   width: 65%; height: 50%;
@@ -99,9 +99,9 @@ header {
 }
 .navigation{height: 50%; width: 100%;}
 .navigation ul{flex-wrap: wrap-reverse;}
-.hebergements{float: left;margin-top:23%; margin-left:0px;}
-.activites{float: right;position: fixed; margin-top:8%;}
-.subscribe{position: fixed; margin-bottom: 30%;}
+.hebergements {float: left;margin-top:23%; margin-left:0px;}
+.activites {float: right;position: absolute; margin-top:12%;}
+.subscribe {position: absolute; margin-bottom: 30%;}
 .navigation a:hover {
   border-bottom: solid; border-top:none;
   border-width: 1px; 
@@ -239,7 +239,7 @@ font-weight: bold;
 }
 .zone_recherche{padding-left: 5px;}
 
- .filtre {align-items: left; width: 100%; margin-left : 0px; margin-right: 0px;
+ .filtre {width: 100%; margin-left : 0px; margin-right: 0px;
   }
 
   .filtre ul { display: flex; width: 80%; margin-left : 0px;
@@ -266,7 +266,7 @@ font-weight: bold;
   color:#0065fc;
 }
 span {
-  font-weight: bolder; float: bottom;
+  font-weight: bolder;
 }
 
 article
@@ -391,7 +391,7 @@ aside a{
   text-align: left; margin-left: 10%; justify-content: space-around; width:95%; height: 40%;
 }
 aside img {
-  border-radius:15px,0px,0px,15px;}
+  border-radius:15px 0px 0px 15px;}
 
 aside h2 .fas{float: right; margin-bottom: 10px;}
 }
@@ -454,7 +454,7 @@ margin-left: 20px;
 footer {
     background-color: #f2f2f2; width: 100%;
     display: flex;
-    justify-content: space-between; margin: right 0px; 
+    justify-content: space-between; margin-right: 0px; 
   }
 
 footer ul {
