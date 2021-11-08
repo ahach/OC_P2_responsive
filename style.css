@@ -1,17 +1,23 @@
 body {
   font-family: "Raleway", sans-serif;
-  font-size: 1.2em;
+  font-size: 1.2em; max-width: 95%;
 }
 #bloc_page {
-  width: 100%;
+  max-width: 85%;
   margin: auto;
   display: flex; 
   flex-direction: column;
   cursor: pointer;
 }
+/*regle responsive pour marges sur Ipad*/
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+
+body{max-width : 1024px;}
+#bloc_page{min-width:900px; position:justify;}
+}
 h1, h2 {
-  font-size: 1.2em; 
-  text-align: left;
+  font-size: 1.2em;
+  text-align: justify;
 }
 
 h2 {
@@ -19,7 +25,7 @@ h2 {
 
 p {
   font-family:"Raleway", sans-serif; 
-  font-size: 1em; 
+  font-size: 1em; color:grey;
   text-align: left;
 }
 header {
@@ -36,32 +42,28 @@ header {
   margin-bottom: 50px;
   padding-top: 50px; 
 }
-
 .logo {
   width:60%
 }
-
 .logo img {
   width: 140px;
   height: 100px; 
   top:0px;
   left:0px;
 }
-
 .navigation {
   width: 40%; float:right;
   display: flex;
   flex-direction: row;
 }
 .navigation ul, .filtre ul {
-    display: flex; justify-content: space-around; width: 100%;
+    display: flex; justify-content: space-between;
     list-style-type: none; flex-direction: row;
     color: grey; 
      }
   
     .navigation a , .filtre a {
     color: grey; text-decoration: none;
-    width: 60%;
     justify-content: space-between; padding-top: 25px;
     
   }
@@ -75,54 +77,55 @@ header {
     }
 
 .slogan {
-  width:50%; height: 50%;
+  width:100%; height: 50%;
 }
 
 /*responsive sur bloc_1 du header*/
 
 @media all and (max-width: 480px)
 {
-  #bloc_page {
-    width: 95%;
-    margin-left: 15%;
-  }
 .head_bloc_1 {
   display:flex; flex-direction: row;
   height: 100%; justify-content: space-evenly;
 }
 .logo {
-  width: 65%; height: 50%;
+  width: 70%;
 }
 .logo img {
-  width: 100px; position:absolute; margin-left: 15%; margin-top: 15%; 
-  height: 70px;
+  width: 120px; position:absolute; margin-left: 15%; margin-top: 15%;height: 70px;
 }
-.navigation{height: 50%; width: 100%;}
-.navigation ul{flex-wrap: wrap-reverse;}
-.hebergements {float: left;margin-top:23%; margin-left:0px;}
-.activites {float: right;position: absolute; margin-top:12%;}
-.subscribe {position: absolute; margin-bottom: 30%;}
+.navigation{width: 100%; }
+.navigation ul{flex-wrap: wrap-reverse;width: 100%;}
+.navigation a{padding-left: 0px; width: 100%; text-align: center;}
+.subscribe a{ color:#0065fc;}
+.subscribe {margin-left: 100%;}
 .navigation a:hover {
   border-bottom: solid; border-top:none;
   border-width: 1px; 
-  border-color:#0065fc; background-color:white; color: #0065fc;
+  border-color:#0065fc; background-color:white; color:#0065fc;
   padding-bottom: 10px;
   }
 
 .slogan {
-width: 100%; height: 90px; margin-right: 0%; margin-bottom: 20px;}
+width: 100%; height: 90px; margin-bottom: 20px;}
+p{word-wrap: normal;}
 
-}/* fin du responsive sur bloc_1*/
+}
+@media all and (max-width: 320px){
+  .activites{margin-top: 50%;padding-bottom:0;}
+  .hebergements{margin-left: 70%;padding-top:0;}
+}
+
+/* fin du responsive sur bloc_1*/
 
 .head_bloc_2 {
   display:flex; 
-  float: left;
-  width: 100%; flex-wrap: wrap;
-  
-}
+  flex-direction: column;
+  width: 100%;
+  }
 .rechercher {
   display: flex; 
-  flex-direction: row; 
+  flex-direction: row;
   width: 100%; margin-top: 40px;
   align-items: center;
   justify-content: left;
@@ -182,20 +185,21 @@ width: 100%; height: 90px; margin-right: 0%; margin-bottom: 20px;}
 } /*fin du responsive sur le bouton*/
 
 .filtre {
-  display: flex; margin-left: 0px; margin-right: 500px;
-  flex-direction:row; 
-  align-items: flex-start; justify-content: stretch;
-  flex-wrap: wrap; 
-  width: 70%;
+  display: flex; margin-left: 0px;
+ flex-direction:row; padding-top:2%;
+align-items: flex-start; justify-content: stretch; 
+flex-wrap: wrap; 
+width: 100%; height: 20%;
 }
+.filtre ul{display: flex; flex-direction:row; justify-content: space-evenly; height: 10%;}
+.filtre h2{margin-left: 0;}
 
 .filtre a { 
-margin: 4px;
+margin: 4px; width: 100%;
 padding-top:9px; 
 padding-bottom:2px; 
 padding-right: 20px; 
-border:solid; 
-border-width: 2px; 
+border:3px solid grey;
 border-color:#f2f2f2; 
 border-radius: 20px 20px 20px 20px; 
 color: black; 
@@ -218,21 +222,13 @@ font-weight: bold;
   border: solid #f2f2f2 1px; 
   border-radius: 20px 20px 20px 20px;
 }
-
-/*responsive sur bloc_2 du header pour ipad et petites résolutions*/
-@media only screen and (min-width: 768px) and (max-width: 1024px) 
-{
-.rechercher {
-  width: 70%; height: 70px; justify-content: stretch; margin-top: 100px;
-}
-.zone_recherche{margin-top: 50px;}
-}
-
+/*regles responsive pour le bloc 2 du header*/
 @media all and (max-width: 480px)
 {
-  .head_bloc_2
-  { float: none; width: 480px;
-    height: max-content;}
+.head_bloc_2
+  { 
+float: none;
+height: max-content;}
 
 .rechercher {
   width: 480px; height: 70px; justify-items: flex-start; margin-top:0px;
@@ -292,9 +288,9 @@ article a {
   flex-direction: column;
   padding-bottom: 5px;
   padding-right: 5px;
-  padding-left: 5px; margin-left: 20px; margin-right: 20px; margin-bottom: 30px; margin-top: 5px; border-radius: 15px; border:5px none grey; box-shadow: 10px 10px 10px #f2f2f2;
+  padding-left: 5px; margin-right: 20px; margin-bottom: 30px; 
+  margin-top: 5px; border-radius: 15px; border:5px none grey; box-shadow: 10px 10px 10px #f2f2f2;
   text-decoration: none; color:black; text-align: left;}
-
 
 .star {
   display: flex; 
@@ -342,18 +338,12 @@ aside img {width: 200px; height: 95%; border-radius: 15px 0px 0px 15px; float: l
 aside .star{ margin-top:30%;}
 
 /*responsive section_1 pour ipad */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
 
-  article {
-    width: 100%;
-  }
-  aside {
-    width: 100%;
-  }
-  aside a
-  {
-  width: auto; height: auto;
-}
+  aside a {
+    width: auto;
+    height:auto;
+
 }
 /*responsive section_1 pour plus petites résolutions*/
 @media all and (max-width: 480px)
