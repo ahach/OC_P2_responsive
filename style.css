@@ -1,20 +1,15 @@
 body {
   font-family: "Raleway", sans-serif;
-  font-size: 1.2em; max-width: 95%;
+  font-size: 1.2em; max-width: 100%;
 }
 #bloc_page {
-  max-width: 85%;
+  max-width: 95%;
   margin: auto;
   display: flex; 
   flex-direction: column;
   cursor: pointer;
 }
-/*regle responsive pour marges sur Ipad*/
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
 
-body{max-width : 1024px;}
-#bloc_page{min-width:900px; position:justify;}
-}
 h1, h2 {
   font-size: 1.2em;
   text-align: justify;
@@ -52,7 +47,8 @@ header {
   left:0px;
 }
 .navigation {
-  width: 40%; float:right;
+  width: 40%; 
+  float:right;
   display: flex;
   flex-direction: row;
 }
@@ -75,7 +71,7 @@ header {
     border-color:#0065fc; background-color:white; color: #0065fc;
     padding-top: 30px;
     }
-
+    .subscribe a{ color:#0065fc;}
 .slogan {
   width:100%; height: 50%;
 }
@@ -97,7 +93,6 @@ header {
 .navigation{width: 100%; }
 .navigation ul{flex-wrap: wrap-reverse;width: 100%;}
 .navigation a{padding-left: 0px; width: 100%; text-align: center;}
-.subscribe a{ color:#0065fc;}
 .subscribe {margin-left: 100%;}
 .navigation a:hover {
   border-bottom: solid; border-top:none;
@@ -185,8 +180,8 @@ p{word-wrap: normal;}
 } /*fin du responsive sur le bouton*/
 
 .filtre {
-  display: flex; margin-left: 0px;
- flex-direction:row; padding-top:2%;
+display: flex; margin-left: 0px;
+flex-direction:row; padding-top:2%;
 align-items: flex-start; justify-content: stretch; 
 flex-wrap: wrap; 
 width: 100%; height: 20%;
@@ -265,8 +260,7 @@ span {
   font-weight: bolder;
 }
 
-article
-{
+article{
   width: 60%; 
   display: flex; 
   position: relative; 
@@ -275,17 +269,15 @@ article
   align-items: center; 
   background-color: #f2f2f2;
    margin-bottom: 5px; padding-right: 10px; padding-left: 10px;
-  padding-top: 20px; border-radius: 10px; margin-right: 20px; margin-left:20px; 
-  display: inline-block;
-}
+  padding-top: 20px; border-radius: 10px; margin-right: 15px; margin-left:20px; 
+  display: inline-block;}
 
 article a {
   background-color: white; 
   padding-top: 5px; 
   display: flex; 
   justify-content: left; 
-  display: inline-block; 
-  flex-direction: column;
+  display: inline-block;
   padding-bottom: 5px;
   padding-right: 5px;
   padding-left: 5px; margin-right: 20px; margin-bottom: 30px; 
@@ -302,7 +294,7 @@ article img {width: 300px;
   margin-bottom: 30px;}
 
 aside
-{ width:40%; 
+{ width:30%; 
   display: flex; 
   flex-direction:column;
   display: inline-block;
@@ -311,7 +303,7 @@ aside
   align-content: center;
   margin-bottom: 5px;
   padding-top: 20px; padding-left: 20px; padding-bottom: 20px;
-  border-radius: 10px; margin-left: 20px;}
+  border-radius: 10px; margin-left: 15px;}
 
 aside a
 {
@@ -321,8 +313,6 @@ aside a
   flex-direction: row;
   display: inline-block;
   padding-bottom: 0px; 
-  width: 70%; 
-  height: 25%;
   padding-right: 25px; 
   padding-left: 5px; 
   margin-left: 30px; 
@@ -336,14 +326,31 @@ aside a
 
 aside img {width: 300px; 
   height: 210px; border-radius: 15px 0px 0px 15px; float: left; margin-right: 15px;}
-aside .star{ margin-top:30%;}
+aside .star{ margin-top:20%; float: right;}
 
-/*responsive section_1 pour ipad */
+/*responsive pour ipad */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-
-  aside a {
-    width: auto;
-    height:auto;
+body{width: 90%;}
+#bloc_page{width:100%;}
+.head_bloc_1{width: 65%;}
+.logo{width: 50%;}
+.navigation ul{width: 40%;}
+.rechercher{margin-top:10%;}
+.filtre{justify-content: stretch;}
+.filtre ul{ width: auto; flex-wrap: wrap; padding-left:2px;}
+.section_1{margin-left: 0; width: 100%;}
+  article{ width: 60%; justify-content: space-around; display: inline-flex; flex-wrap: wrap; 
+    margin-right:0;padding-top:0;}
+  article a{width: 40%; height: 20%;}
+  article a img{height: 50%; width:100%;}
+aside{width: 40%;
+  height:auto; margin-right: 0; padding-left:0;}
+  .section_1 aside a {flex-direction: row; width: auto;
+   margin-left: 10%;margin-right: 10%;padding-bottom: 0;text-align: right; margin-bottom: 10%;
+}
+.section_1 aside img{height: 150px; width:50%;margin-right:0;}
+aside .star{ margin-top:10%; float: right;}
+.section_2 {flex-wrap: wrap; justify-content: space-evenly; width: 92%;}
 
 }
 /*responsive section_1 pour plus petites résolutions*/
