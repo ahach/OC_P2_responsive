@@ -4,7 +4,8 @@ body {
   display: flex; 
   flex-direction: column;
   margin-left: auto;
-  margin-right: auto;max-width: 95%;
+  margin-right: auto;
+  max-width: 95%;
 }
 h1, h2 {
   font-size: 1.2em;
@@ -48,6 +49,7 @@ header {
   display: flex;
   flex-direction: row;
 }
+
 .navigation ul, .filtre ul {
     display: flex; justify-content: space-between;
     list-style-type: none; flex-direction: row;
@@ -76,23 +78,27 @@ header {
 
 @media all and (max-width: 480px)
 {
-  header{margin-left: auto;
-    margin-right: auto;
-  width:90%;}
-.head_bloc_1 {
-  display:flex; flex-direction: row; float:right;
-  height: 100%; justify-content: space-evenly;
-}
+  .header{width:50%;}
+  .head_bloc_1{height: 50%;}
+
 .logo {
-  width: 80%;
+  width: 80%; height:10%;position:relative;
 }
 .logo img {
-  width: 120px; position:absolute; margin-top: 20%;height: 70px; margin-right:2%; margin-left:10%;
+  width: 50%; margin-top: 20%;height: 10%; margin-right:2%; margin-left:10%; float: top; position:absolute;
 }
-.navigation{width: 100%; }
-.navigation ul{flex-wrap: wrap-reverse;width: 100%;}
-.navigation a{padding-left: 0px; width: 100%; text-align: center;}
-.subscribe {margin-left: 100%; padding-left: 100%; margin-top: 10%;}
+.navigation {
+    width: 100%;
+    float:right; flex-wrap:wrap;
+    display: flex;
+    flex-direction: row;
+  }
+
+.navigation ul{flex-wrap:wrap-reverse;}
+.navigation li{position:relative;}
+.navigation ul .subscribe{width:100%; position:absolute; bottom:35px;left:260px;}
+.navigation ul .activites{width:50%; position:absolute;left:260px; bottom:1px; }
+.navigation ul .hebergements{position:absolute; width:50%; left:150px;bottom:1px; }
 .navigation a:hover {
   border-bottom: solid; border-top:none;
   border-width: 1px; 
@@ -100,21 +106,15 @@ header {
   padding-bottom: 10px;
   }
 
+.head_bloc_2{height: 100%;margin-top:10%;}
+  
 .slogan {
 width: 100%; height: 90px; margin-bottom: 20px;}
 p{word-wrap: normal;}
+.filtre{width:100%;}
+.filtre ul{width:100%;padding:0;}
+.filtre a {width:50%;}
 
-}
-@media all and (max-width: 420px){
-  header{
-  width:100%;}
-.head_bloc_1 {
-  width:100%;
-}
-  .navigation ul{padding:0;margin:0; width: 100%;}
-  .navigation li{padding:0;position: relative;}
-  .navigation .activites{float:left;}
-  .navigation .hebergements{margin-left: 90%;margin-bottom:30%;}
 }
 
 /* fin du responsive sur bloc_1*/
@@ -196,10 +196,10 @@ width: 100%; height: 20%;
 .filtre h2{margin-left: 0;}
 
 .filtre a { 
-margin: 4px; width: 100%;
-padding-top:9px; 
-padding-bottom:2px; 
-padding-right: 20px; 
+margin: 4px; width: 100%; 
+padding-top:6px; 
+padding-bottom:6px; 
+padding-right: 18px; padding-left: 0px;
 border:3px solid grey;
 border-color:#f2f2f2; 
 border-radius: 20px 20px 20px 20px; 
@@ -211,10 +211,9 @@ font-weight: bold;
 .filtre .fas {
   color:#0065fc; 
   background-color:#DEEBFF; 
- margin-right: 4px; 
- margin-top:0px; 
- margin-bottom: 2px ; 
- padding:10px; 
+ margin-top:0px; margin-right: 4px; margin-left:0px;
+ margin-bottom: 4px ; 
+ padding:12px; padding-top:10px;
  border:5px; 
  border-radius: 20px 20px 20px 20px;
 }
@@ -393,7 +392,7 @@ article img
     }
 
 aside {
-  width: 90%; margin-left:40%; margin-right: 20%;
+  width: 90%; margin-left:50%; margin-right: 20%;
   align-items: center; padding-left: 0px;padding-right: 30%;
 }
 aside a{
@@ -402,6 +401,12 @@ aside a{
 aside img {
   border-radius:15px 0px 0px 15px;}
 
+}
+@media all and (max-width: 420px)
+{.section_1 article{margin-right:50%;margin-left:30%;}
+  .section_2{
+  margin-right:60%; 
+  align-content:left;}
 }
 
 /*fin du responsive section_1*/
