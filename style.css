@@ -327,9 +327,10 @@ aside a
   border:1px none grey; box-shadow: 5px 5px 5px #f2f2f2;
   text-decoration: none; 
   color:black;}
+  .text_aside{display:flex;flex-direction: column;}
 
-aside img {width: 50%; 
-  height: 100%; border-radius: 15px 0px 0px 15px; float: left; margin-right: 15px;}
+aside img {width: 240px; margin-right: 2%;
+  height: 210px; border-radius: 15px 0px 0px 15px; float: left;}
 
 aside h2 .fas{float:right;margin-bottom:10%;margin-right:10%;}
 aside .star{ margin-top:10%; float: bottom;}
@@ -347,15 +348,19 @@ header{width:80%;margin-left:5%; margin-right:5%;}
 .filtre{justify-content: stretch;}
 .filtre ul{ width: auto; flex-wrap: wrap; padding-left:2px;}
 .section_1{margin-left: 0; width: 100%;}
+.section_1 h2{width: 100%;}
   article{ width: 60%; justify-content: space-around; display: inline-flex; flex-wrap: wrap; 
     margin-right:0;padding-top:0;padding-left:5%;}
   
-aside{width: 45%; padding-right:20%; padding-top:5px;
+aside{width: 45%;padding-right:20%; padding-top:2px;
   height:auto; margin-right: 0; padding-left:0;}
-  .section_1 aside a {flex-direction: row; width: 100%;
-  padding-bottom: 0;text-align: right; margin-bottom: 10%;
+ 
+  .section_1 aside a { width: 250px; display:flex;flex-direction: row;
+  padding-bottom: 0;text-align: right; margin-bottom: 0%;
 }
-.section_1 aside img{height: 150px; width:50%;margin-right:0;float:left;}
+
+.section_1 aside img{width: 200px; margin-right: 2%;
+  height:150px;float:left;}
 aside .star{ margin-top:10%; float: right;}
 .section_2 {flex-wrap: wrap; justify-content: space-evenly; width: 100%;}
 
@@ -403,13 +408,12 @@ aside img {
 {.zone_recherche{width:65%;}
 .slogan{margin-bottom:0;}
 article{padding-left:0;margin-left:10%;}
-article a {width:320px;}
+article a {width:340px;}
     .section_2{
-  margin-right:60%; 
+max-width:420px;
   align-content:left;}
-  .section_2 a {width:270px; margin-right:20%;margin-left:20%}
-  .grande_image{width:270px;}
-}
+  .section_2 a, .grande_image{width:340px; padding-right:0; margin-right: 0;}
+  .section_2 a img{width:340px; height:80%;}}
 
 /*fin du responsive section_1*/
 
