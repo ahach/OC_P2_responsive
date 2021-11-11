@@ -327,7 +327,7 @@ aside a
   color:black;}
   .text_aside{display:flex;flex-direction: column; float:right;}
 
-aside img {width: 150px; margin-right: 2%;
+aside img {width: 200px; margin-right: 2%; padding:1%;
   height: 210px; border-radius: 15px 0px 0px 15px; float: left;}
 
 aside h2 .fas{float:right;margin-bottom:10%;margin-right:10%;}
@@ -335,7 +335,7 @@ aside .star{ margin-top:40%; float: bottom;}
 h2{width: 100%;}
 
 /*responsive pour ipad */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+@media only screen and (min-device-width: 480px) and (max-device-width: 1024px) {
 body{width: 90%;margin-left:0%; margin-right:0%;}
 header{width:80%;margin-left:5%; margin-right:5%;}
 .head_bloc_1{width: 100%;}
@@ -357,8 +357,7 @@ aside{width: 45%;padding-right:25%; padding-top:2px;
   .section_1 aside a { width: 250px; display:flex;flex-direction: row;
   padding-bottom: 0;text-align: right; margin-bottom: 10%;padding-right: 50%; 
 }
-.section_1 .tout_bleu{width:250px;padding-right: 10%;}
-.section_1 aside img{width: 240px; margin-right: 2%;
+.section_1 aside img{width: 200px; margin-right: 2%;
  height: 200px;float:left;}
 .section_1 .tout_bleu{width:240px;}
 aside .star{ margin-top:10%; float: right;}
@@ -401,6 +400,8 @@ aside a{
   text-align: left; margin-left: 30%; margin-right: 5%; justify-content: space-around; width:95%; height: 40%;
   padding-right: 20%;
 }
+.section_1 aside img{width: 150px;
+  height: 200px;}
 aside .star{ margin-top:45px;}
 aside img {
   border-radius:15px 0px 0px 15px;}
