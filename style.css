@@ -13,7 +13,7 @@ h1, h2 {
 }
 
 h2 {
-   margin-left: 1.6em;}
+   margin-left: 1.6em; width: 100%;}
 
 p {
   font-family:"Raleway", sans-serif; 
@@ -269,9 +269,8 @@ article{
   display: flex; 
   flex-direction: row; 
   flex-wrap: wrap;
-  justify-content:stretch; 
-  align-items: center; 
-  background-color: #f2f2f2;
+  background-color: #f2f2f2;justify-content: space-evenly;
+  align-content: center;
   margin-bottom: 5px; padding-right: 10px; padding-left: 10px;
   padding-top: 20px; border-radius: 10px; margin-right: 15px; margin-left:15px; 
   }
@@ -309,7 +308,7 @@ aside
   justify-content: space-evenly;
   align-content: center;
   margin-bottom: 5px;
-  padding-top: 10px; padding-left: 20px; padding-bottom: 20px;
+  padding-top: 10px; padding-left: 20px; padding-bottom: 10px;
   border-radius: 10px; margin-left: 15px; padding-right: 15px}
 
 aside a
@@ -323,7 +322,7 @@ aside a
   padding-left: 5px; 
   margin-left:15px; 
   margin-right:10px; 
-  margin-bottom: 20px; 
+  margin-bottom: 10%; 
   margin-top: 5px;
   border-radius: 15px;
   border:1px none grey;
@@ -344,6 +343,7 @@ h2{width: 100%;}
 @media only screen and (min-device-width: 480px) and (max-device-width: 1024px) {
 body{width: 90%;margin-left:0%; margin-right:0%;}
 header{width:80%;margin-left:5%; margin-right:5%;}
+
 .head_bloc_1{width: 100%;}
 .head_bloc_2{width: 100%;}
 .logo{width: 50%;}
@@ -354,10 +354,10 @@ header{width:80%;margin-left:5%; margin-right:5%;}
 .filtre ul{ width: auto; flex-wrap: wrap; padding-left:2px;}
 .section_1{margin-left: 0; width: 100%;}
 
-  article{ width: 50%; justify-content: space-around; display: inline-flex; flex-wrap: wrap; 
-    margin-right:0;padding-top:0;padding-left:5%;}
+article{ width: 50%;
+    margin-right:0;padding-top:0; padding-left:5%;}
   
-aside{width: 40%; padding-top:2px; justify-content: stretch;
+aside{width: 50%; padding-top:2px; justify-content: stretch;
   height:auto; margin-right: 0; padding-left:0;}
  
   .section_1 aside a { min-width: 200px; 
@@ -372,10 +372,7 @@ aside{width: 40%; padding-top:2px; justify-content: stretch;
 aside .star{ margin-top:10%; float: right;}
 .section_2 {flex-wrap: wrap; justify-content: space-evenly; width: 100%;}
 }
-@media only screen and (min-device-width: 480px) and (max-device-width: 874px) 
-{
-  .text_aside, .section_1 .tout_bleu .text_aside{max-width: 100px;}
-}
+
 /*responsive section_1 pour plus petites résolutions*/
 @media all and (max-width: 480px)
 {
@@ -405,41 +402,43 @@ article img
     }
 
 aside {
-  width: 90%; margin-left:50%; margin-right: 20%;
-  align-items: center; padding-left: 0px;padding-right: 25%;
+  width: 100%;margin-left:30%;
+  padding-left: 10%;
 }
 aside a{
-  text-align: left; margin-left: 40%; margin-right: 5%;
+  text-align: left; 
   justify-content: space-around; width:90%; height: 40%;
-  padding-right: 20%;
 }
 .section_1 aside img{width: 150px;
   height: 200px;object-fit: cover;}
   .section_1 .tout_bleu img{min-width:150px;}
-aside .star{ margin-top:45px;}
-
 
 }
 @media all and (max-width: 420px)
-{.zone_recherche{width:65%;}
+{
+  h2{margin-left: 0;}
+  .zone_recherche{width:65%;}
 .slogan{margin-bottom:0;}
 article{padding-left:0;margin-left:10%;}
-article a {width:340px;}
-aside a, .section_1 aside .tout_bleu  {max-width:200px;}
-aside img {max-width:100px;max-height: 150px;}
-aside .star{ margin-top:20px;}
-.text_aside, .section_1 .tout_bleu .text_aside{
-  max-width: 50px;
- }
- .section_1 .tout_bleu img{min-width:100px;max-height: 150px;}
-
+article a {width:310px; margin-right: 0;}
+aside {
+  padding-left: 0%;margin-left:10%;padding-right:10%;
+}
+aside a {
+padding-right:10%;
+}
+aside img {max-width:120px;max-height: 100%; object-fit: cover;}
+.section_1 .tout_bleu img{min-width:120px;max-height: 100%;object-fit: cover}
+.text_aside{
+  width: 50%;padding-top: 0%;height: 100%;}
+  
     .section_2{
-max-width:420px;
-  align-content:left;}
-  .section_2 a, .grande_image{width:340px; padding-right:0; margin-right: 0;}
-  .section_2 a img{width:340px; height:80%;}}
+max-width:380px;margin-left: 5%;margin-right: 5%;
+  }
+  .section_2 a, .grande_image{width:320px; padding-right:0; margin-right: 0;}
+  .section_2 a img{width:320px; height:80%;}}
 
-/*fin du responsive section_1*/
+/*fin du responsive sur tres petites résolutions*/
 
 .section_2 {
   display: flex; 
