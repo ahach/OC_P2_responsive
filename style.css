@@ -78,7 +78,7 @@ header {
 
 @media all and (max-width: 480px)
 {
-header{width:95%;margin-left:5%;margin-right:5%;}
+header{width:100%;margin-left:5%;margin-right:5%;}
   .head_bloc_1{height: 100%;padding-top: 0%;}
 
 .logo {
@@ -269,7 +269,8 @@ article{
   display: flex; 
   flex-direction: row; 
   flex-wrap: wrap;
-  background-color: #f2f2f2;justify-content: space-evenly;
+  background-color: #f2f2f2;
+  justify-content: space-evenly;
   align-content: center;
   margin-bottom: 5px; padding-right: 10px; padding-left: 10px;
   padding-top: 20px; border-radius: 10px; margin-right: 15px; margin-left:15px; 
@@ -336,14 +337,13 @@ aside img {width: 210px; margin-right: 2%; padding:1%;
   height: 200px; border-radius: 15px 0px 0px 15px; float: left;}
   .section_1 .tout_bleu img{min-width:210px;}
 aside h2 .fas{float:right;margin-bottom:10%;margin-right:10%;}
-aside .star{ margin-top:40%; float: bottom;}
+aside .star{ margin-top:40%;}
 h2{width: 100%;}
 
 /*responsive pour ipad */
 @media only screen and (min-device-width: 480px) and (max-device-width: 1024px) {
 body{width: 90%;margin-left:0%; margin-right:0%;}
 header{width:80%;margin-left:5%; margin-right:5%;}
-
 .head_bloc_1{width: 100%;}
 .head_bloc_2{width: 100%;}
 .logo{width: 50%;}
@@ -371,28 +371,30 @@ aside{width: 50%; padding-top:2px; justify-content: stretch;
 .section_1 .tout_bleu img{min-width:150px;}
 aside .star{ margin-top:10%; float: right;}
 .section_2 {flex-wrap: wrap; justify-content: space-evenly; width: 100%; margin-left: 0;}
+
 }
 
-/*responsive section_1 pour plus petites résolutions*/
+/*responsive section 1 et 2 pour plus petites résolutions*/
 @media all and (max-width: 480px)
 {
+  {width:95%;}
 .section_1{
   flex-direction: column-reverse; 
   align-items: center; 
   width: 100%; 
 }
 article {
-  width: 100%; margin-left: 40%;
+  width: 90%; margin-left: 10%;
   flex-direction: column; 
   align-items: center; background:none;
 }
 article a, .section_2 a
-{ border-width: 10px 10px 5px 0; border-radius: 20px; width: 430px;
-  padding-top: 0px;
+{ 
+  padding-top: 0px; margin-left:0;
   padding-bottom: 15px;
-  padding-right: 0px; margin-bottom: 15px; 
- box-shadow: 5px 5px 5px #f2f2f2; border: 1px none grey;
+  padding-right: 0px; margin-bottom: 15px;
 }
+article a{width: 100%;}
 article img
   { height: 210px; width: 100%; border-width: 10px 10px 5px 0; border-radius: 20px;
     padding-top: 0px; object-fit: cover;
@@ -409,8 +411,26 @@ aside a{
 }
 .section_1 aside img{width: 150px;
   height: 200px;object-fit: cover;}
-  .section_1 .tout_bleu img{min-width:150px;}
-
+  .section_1 .tout_bleu img{min-width:150px;} 
+.section_2 {
+  display: flex; width: 100%;
+  flex-direction: column;flex-wrap: wrap;
+  justify-content: stretch; margin-right: 0;margin-left: 0;
+}
+.section_2 a, .section_2 a .grande_image{
+  height: 225px; min-width: 350px; padding-left: 0;
+}
+.section_2 img, .section_2 a .grande_image img
+{ height: 85%; min-width: 340px; object-fit: cover; margin-left:0;
+  }
+  .section_2 a .grande_image
+{ border-width: 10px 10px 5px 0; border-radius: 20px;
+  padding-top: 0px;
+  padding-bottom: 15px;
+  padding-right: 0px;
+  padding-left: 0px; margin-left: 20px;
+  }
+  
 }
 @media all and (max-width: 420px)
 {
@@ -433,8 +453,8 @@ aside img {max-width:120px;max-height: 100%; object-fit: cover;}
     .section_2{
 max-width:380px;margin-left: 5%;margin-right: 5%;
   }
-  .section_2 a, .grande_image{width:320px; padding-right:0; margin-right: 0;}
-  .section_2 a img{width:320px; height:80%;}}
+  
+}
 
 /*fin du responsive sur tres petites résolutions*/
 
@@ -473,26 +493,7 @@ margin-left: 20px;
   .section_2 .grande_image img {
     height:80%;
   }
-    /*responsive section_2*/
-
-@media all and (max-width: 480px)
-{
-.section_2 {
-  flex-direction: column; 
-  align-items: center; 
-  width: 480px;
-}
-.section_2 a {width: 450px; height: 321px; justify-content: space-between; 
-  padding-left:0px;  margin-bottom: 20px;}
-.section_2 img, .grande_image img {height: 210px; width: 95%;}
-.section_2 span {padding-left: 30px;}
-.grande_image{
-  height: 321px;
-}
-}
-/*fin du responsive section_2*/
-
-footer {
+  footer {
     background-color: #f2f2f2; width: 100%;
     display: flex;
     justify-content: space-between; margin-right: 0px; 
