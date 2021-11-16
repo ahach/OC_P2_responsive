@@ -4,7 +4,7 @@ body {
   display: flex; justify-content: center;
   flex-direction: column;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: auto; flex-basis: 90%;
   max-width: 90%;
 }
 h1, h2 {
@@ -21,8 +21,8 @@ p {
   text-align: left;
 }
 header {
-  display: flex; flex-shrink: 3;
-  flex-direction: column; justify-content: space-evenly;width: 100%;
+  display: flex; flex-shrink: 1;
+  flex-direction: column; justify-content: stretch;width: 100%;
 }
 
 .head_bloc_1 {
@@ -31,7 +31,6 @@ header {
   height: 50%; 
   flex-direction: row; flex-wrap: wrap;
   justify-content: space-between; 
-  padding-top: 50px; 
 }
 .logo {
   width:60%;flex-shrink: 1;
@@ -116,28 +115,6 @@ header {
 .rechercher form .fas{
   display:none;
 }
-
-@media all and (max-width: 480px)/*règle responsive pour petites résolutions pour le bouton de recherche*/
-{
-  
-.bouton{
-  display:none;
-}
-.rechercher form .fas{
-  display: flex; float: right; margin-top: 30px;
-  color:white; 
-  background-color:#0065fc;
-  margin-right: 4px; 
-  margin-top:2px; 
-  margin-bottom: 5px ; 
-  padding-top: 10px; padding-bottom: 10px;
-  padding-right: 30px; 
-  padding-left: 20px;
-  border:5px; 
-  border-radius: 10px 10px 10px 10px;
-}
-} /*fin du responsive sur le bouton*/
-
 .filtre {
 display: flex; margin-left: 0px;
 flex-direction:row; padding-top:2%;
@@ -223,10 +200,10 @@ article a {
   text-align: left;}
 
 .star {
-  display: flex; flex-shrink: 1;
+  display: flex; padding-top:5%;
   flex-direction: row;}
 
-article img {width: 270px; flex-shrink: 2;
+article img {width: 270px; flex-shrink: 2; object-fit: cover;
   height: 210px; 
   border-radius: 15px; 
   margin-bottom: 30px;}
@@ -248,7 +225,7 @@ aside a
   padding-top: 2px; 
   display: flex;
   flex-direction: row;
-  width:95%;
+  width:90%;
   padding-bottom: 0px; 
   padding-left: 5px; 
   margin-left:15px; 
@@ -259,19 +236,86 @@ aside a
   border:1px none grey;
   text-decoration: none; 
   color:black;}
-  .text_aside{
-    max-width: 150px;
+  .text_aside, .text_aside .tout_bleu{
+    width: 60%; position:relative;
     padding-top: 5%;}
 
-aside img {width: 210px; margin-right: 2%; padding:1%;
-  height: 200px; border-radius: 15px 0px 0px 15px; float: left;}
-  .section_1 .tout_bleu img{min-width:210px;}
+aside img {width:45%; margin-right: 2%; padding:1%; object-fit: cover;
+  max-height: 100%; border-radius: 15px 0px 0px 15px; float: left;}
+  .section_1 .tout_bleu img{width:50%;object-fit: cover;max-height: 100%}
 aside h2 .fas{float:right;margin-bottom:10%;margin-right:10%;}
-aside .star{ margin-top:35%; max-width: 50%;}
+aside .star{ position:absolute; bottom:20px;}
 h2{width: 100%;}
+.section_2 {
+  display: flex; 
+  flex-direction: row; 
+  margin-bottom: 10px; 
+  justify-content: space-between; flex-wrap:wrap;
+  padding-top: 20px; align-items: center; flex-basis: 100%;
+}
+.section_2 a {display: flex; flex-shrink: 1;
+  display: inline-block;
+  text-decoration: none; 
+  color:black; 
+  padding-bottom: 2px;
+  margin-bottom: 10px; border-width : 15px; border-radius: 20px;
+  border:1px none grey; box-shadow: 5px 5px 5px #f2f2f2; }
 
-/*responsive pour ipad */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+.section_2 span{
+margin-left: 10%;
+}
+.section_2 img
+{ height: 180px; width: 300px; border-width: 10px 10px 5px 0; border-radius: 20px;
+  padding-top: 0px;
+  padding-bottom: 15px;
+  padding-right: 0px;
+  padding-left: 0px; margin-left: 20px;
+  }
+  .petite_image
+  {
+    display: flex; flex-direction: column;
+  }
+  .grande_image{
+    height: 470px;
+  }
+  .section_2 .grande_image img {
+    height:80%;
+  }
+  footer {
+    background-color: #f2f2f2; width: 100%;
+    display: flex;
+    justify-content: space-between; margin-right: 0px; 
+  }
+
+footer ul {
+  list-style-type: none;
+  color: grey;
+  text-decoration: none; display: flex; flex-direction: column;
+}
+
+footer li {
+  display: flex; padding-bottom: 15px;
+  margin-left: 0;
+}
+/*responsive pour larges résolutions  */
+@media only screen and (min-device-width: 993px) and (max-device-width: 1325px) {
+  .filtre{width: 100%;}
+  .section_1{flex-direction: column-reverse;}
+  aside{flex-direction: row; 
+    justify-content: space-evenly; width: 100%; flex-wrap: wrap;;}
+  aside h2{width: 100%; display: flex; justify-content: stretch;}
+  aside a{width: 30%; flex-basis:30%}
+  .section_1 .tout_bleu img{max-width:100px;}
+  aside h2 .fas{margin-left:5%;}
+  .text_aside, .text_aside .tout_bleu{
+    width: 50%; size: 2em;flex-shrink: 1;}
+    aside .star{flex-shrink: 2;bottom:10px; left:10px;}
+    aside .tout_bleu img{flex-shrink: 1; width: 50%;}
+    aside img{flex-shrink: 1; width: 40%;}
+  article{width:100%;}
+}
+/*responsive pour moyennes résolutions type ipad */
+@media only screen and (min-device-width: 769px) and (max-device-width: 992px) {
   
  body {
          max-width: 90%; margin-left:1%; margin-right: 1%; justify-content: stretch; 
@@ -285,6 +329,22 @@ h2{width: 100%;}
     .navigation a{justify-content: stretch;}
         .slogan {
   width: 100%;}
+  .bouton{
+    display:none;
+  }
+  .rechercher form .fas{
+    display: flex; float: right; margin-top: 30px;
+    color:white; 
+    background-color:#0065fc;
+    margin-right: 4px; 
+    margin-top:2px; 
+    margin-bottom: 5px ; 
+    padding-top: 10px; padding-bottom: 10px;
+    padding-right: 30px; 
+    padding-left: 20px;
+    border:5px; 
+    border-radius: 10px 10px 10px 10px;
+  }
   .filtre{width:100%;}
   .filtre ul{width:100%;padding:0;}
   .filtre a {width:50%;}
@@ -312,11 +372,10 @@ aside{width: 50%; padding-top:2px; justify-content: stretch;
 .section_1 .tout_bleu img{min-width:140px;}
 aside .star{ margin-top:35%;}
 .section_2 {flex-wrap: wrap; justify-content: space-evenly; width: 100%; margin-left: 0;}
-
 }
 
-/*responsive pour plus petites résolutions inf à 768px*/
-@media all and (max-width: 767px)
+/*responsive pour plus petites résolutions inf à 769px*/
+@media all and (max-width: 768px)
 {
   .logo {
     width: 80%;position:relative;
@@ -396,91 +455,10 @@ aside a{
   max-height: 225px; max-width: 470px; padding-left: 0;
 }
 .section_2 a img, a .grande_image img {max-width: 470px; object-fit: cover;}
-.petite_image
-{
-  display: none;
-} 
-  }
-@media all and (max-width: 420px)
-{
-  .navigation ul .subscribe{left:100px;bottom:70px;}
-  .zone_recherche{width:65%;}
-.slogan{margin-bottom:0;}
-article{padding-left:0;margin-left:15%;margin-right: 0%;}
-article a {width:310px; margin-right: 0;}
-aside {
-  padding-left: 0%;margin-left:10%;padding-right:10%;
-}
-aside a {
-padding-right:10%; width: 90%;
-}
-aside img {min-width:130px;max-height: 100%; object-fit: cover;}
-.section_1 .tout_bleu img{min-width:130px;max-height: 100%;object-fit: cover}
-.text_aside{
-  min-width: 50%;padding-top: 0%;height: 100%;}
-  
-}
-
-/*fin du responsive sur tres petites résolutions*/
-
-.section_2 {
-  display: flex; 
-  flex-direction: row; 
-  margin-bottom: 10px; 
-  justify-content: space-between; flex-wrap:wrap;
-  padding-top: 20px; align-items: center; flex-basis: 100%;
-}
-.section_2 a {display: flex; flex-shrink: 1;
-  display: inline-block;text-align: center;
-  text-decoration: none; 
-  color:black; 
-  padding-bottom: 2px;
-  margin-bottom: 10px; border-width : 15px; border-radius: 20px;
-  border:1px none grey; box-shadow: 5px 5px 5px #f2f2f2; }
-
-.section_2 span{
-margin-left: 10%;
-}
-.section_2 img
-{ height: 180px; width: 300px; border-width: 10px 10px 5px 0; border-radius: 20px;
-  padding-top: 0px;
-  padding-bottom: 15px;
-  padding-right: 0px;
-  padding-left: 0px; margin-left: 20px;
-  }
-  .petite_image
-  {
-    display: flex; flex-direction: column;
-  }
-  .grande_image{
-    height: 470px;
-  }
-  .section_2 .grande_image img {
-    height:80%;
-  }
-  footer {
-    background-color: #f2f2f2; width: 100%;
-    display: flex;
-    justify-content: space-between; margin-right: 0px; 
-  }
-
-footer ul {
-  list-style-type: none;
-  color: grey;
-  text-decoration: none; display: flex; flex-direction: column;
-}
-
-footer li {
-  display: flex; padding-bottom: 15px;
-  margin-left: 0;
-}
-
-/*responsive footer*/
-@media all and (max-width: 480px)
-{
 footer{
   flex-direction: column; width: 100%;
   text-align: left;
 }
 }
-/*fin du responsive footer*/
+
+
