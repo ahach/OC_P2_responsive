@@ -368,14 +368,14 @@ footer li {
       width: 100%;
       float:right; flex-wrap:wrap;
       display: flex;
-      flex-direction: row;
+      flex-direction: row; flex-basis:100%;
     }
   
-  .navigation ul{flex-wrap:wrap-reverse;}
-  .navigation li{position:relative;}
+  .navigation ul{flex-wrap:wrap-reverse;flex-shrink: 1;}
+  .navigation li{position:relative; }
   .navigation ul .subscribe{width:100%; position:absolute;left:200px;bottom:70px;}
   .navigation ul .activites{width:50%; position:absolute;left:170px; bottom:0.5px; }
-  .navigation ul .hebergements{position:absolute; width:50%; bottom:0.5px;}
+  .navigation ul .hebergements{position:absolute; width:50%; bottom:0.5px; left:5px;}
   .navigation a:hover {
     border-bottom: solid; border-top:none;
     border-width: 1px; 
