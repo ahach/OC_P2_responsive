@@ -1,10 +1,9 @@
 body {
   font-family: "Raleway", sans-serif;
   font-size: 1.2em; cursor: pointer;
-  display: flex; justify-content: center;
+  display: flex; justify-content: stretch;
   flex-direction: column;
-  margin-left: auto;
-  margin-right: auto; flex-basis: 90%;
+  flex-basis: 90%;
   max-width: 90%;
 }
 h1, h2 {
@@ -12,8 +11,7 @@ h1, h2 {
   text-align: justify;
 }
 
-h2 {
-   margin-left: 1.6em; width: 100%;}
+h2 {width: 100%;}
 
 p {
   font-family:"Raleway", sans-serif; 
@@ -33,7 +31,7 @@ header {
   justify-content: space-between; 
 }
 .logo {
-  width:60%;flex-shrink: 1;
+  width:50%;flex-shrink: 1;
 }
 .logo img {
   width: 140px;
@@ -49,7 +47,7 @@ header {
 }
 
 .navigation ul, .filtre ul {
-    display: flex; justify-content: space-between;
+    display: flex; justify-content: space-between; padding-left: 0;
     list-style-type: none; flex-direction: row;
     color: grey;
      }
@@ -170,7 +168,7 @@ font-weight: bold;
 span {
   font-weight: bolder; width:100%;
 }
-
+article h2{margin-left: 5%;}
 article{
   width: 60%; flex-basis:60%;
   display: flex; flex-shrink: 1;
@@ -300,14 +298,14 @@ footer li {
 /*responsive pour larges résolutions  */
 @media only screen and (min-device-width: 769px) and (max-device-width: 1325px) {
   body {
-    justify-content: stretch; margin-right: 10%; margin-left:10%;
-    
-    max-width: 90%;}
+    justify-content: stretch;
+        max-width: 90%;}
   .filtre{width: 100%;}
   .section_1{flex-direction: column-reverse;}
   aside{flex-direction: row; 
     justify-content: stretch; width: 100%; flex-wrap: wrap; padding-right: 0;}
   aside h2{width: 100%; display: flex; justify-content: stretch; height: 30px;}
+ 
   aside a{width: 30%; flex-basis:30%; margin-right: 0;}
   .section_1 .tout_bleu img{max-width:100px;}
   aside h2 .fas{margin-left:5%;}
@@ -391,7 +389,7 @@ footer li {
 .zone_recherche{width:70%;}
  .filtre {width: 100%; margin-left : 0px; margin-right: 0px;
   }
-
+  .filtre h2{width: 100%;}
   .filtre ul { display: flex; width: 90%; margin-left : 0px;
    flex-wrap: wrap; justify-content: space-between;
   }  
@@ -407,6 +405,7 @@ article {
   flex-direction: column; 
   align-items: center; background:none;
 }
+article h2{margin-left: 0%;}
 article a, .section_2 a
 { 
   padding-top: 0px; margin-left:0;
@@ -424,6 +423,8 @@ article img
 
 aside {
   width: 100%;margin-left:10%;padding-left: 0;}
+  aside h2{width: 100%; display: flex; justify-content: stretch; height: 30px;}
+  aside h2 .fas{margin-left:10%;}
 aside a{
   text-align: left; margin-right: 10%; margin-left: 5%;
   max-width: 470px; height: 40%;
