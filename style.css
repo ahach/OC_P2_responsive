@@ -441,6 +441,9 @@ aside a{
          object-fit: cover;
          max-height:225px;width: 100%;
        }
+       .section_2 span{
+        margin-left: 0%;
+        }
 footer{
   flex-direction: column; width: 100%; justify-content: space-evenly;
   text-align: left;
