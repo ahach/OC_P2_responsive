@@ -280,7 +280,7 @@ margin-left: 10%;
     height: 470px;
   }
   .section_2 .grande_image img {
-    height:391px;
+    height:80%;
   }
   footer {
     background-color: #f2f2f2; width: 100%;
@@ -303,8 +303,8 @@ footer li {
   .filtre{width: 100%;}
   .section_1{flex-direction: column-reverse;}
   aside{flex-direction: row; 
-    justify-content: space-evenly; width: 100%; flex-wrap: wrap;;}
-  aside h2{width: 100%; display: flex; justify-content: stretch;}
+    justify-content: stretch; width: 100%; flex-wrap: wrap; padding-right: 0;}
+  aside h2{width: 100%; display: flex; justify-content: stretch; height: 30px;}
   aside a{width: 30%; flex-basis:30%}
   .section_1 .tout_bleu img{max-width:100px;}
   aside h2 .fas{margin-left:5%;}
@@ -425,16 +425,22 @@ aside a{
   height: 200px;object-fit: cover;}
   .section_1 .tout_bleu img{max-width: 450px; } 
 .section_2 { 
-    flex-direction: column; align-items: center; width: 100%; justify-content: space-around;
-     flex-basis:90%;}
-.section_2 a, .grande_image {
-  max-height: 300px; max-width: 100%; flex-shrink: 1;flex-basis:100%;
-}
-.section_2 a img, .grande_image img {
-  width: 100%; margin-left:0; flex-basis:1;
-  object-fit: cover;
-  max-height:225px;}
-
+    flex-direction: column; width: 90%; justify-content: space-around;margin-left: 2%;
+     flex-basis:100%;}
+     .section_2 a, .section_2 .grande_image{
+      height: 300px; min-width: 100%; flex-shrink: 1;flex-basis:100%;
+    }
+    .section_2 .petite_image{
+      flex-direction: row; 
+      justify-content: space-evenly; 
+      flex-wrap: wrap; 
+      width:100%}
+         
+       .section_2 img, .section_2 .grande_image img {
+         height:80%;margin-left:0; flex-basis:1;
+         object-fit: cover;
+         max-height:225px;width: 100%;
+       }
 footer{
   flex-direction: column; width: 100%; justify-content: space-evenly;
   text-align: left;
