@@ -156,7 +156,7 @@ font-weight: bold;
 .section_1 .fas {
   color:#0065fc;
 }
-span {
+.text {
    display: flex;flex-direction: column; justify-content:stretch; font-size: 0.9em; height:60%;
 }
 h3{font-weight: bolder; }
@@ -265,7 +265,7 @@ h2{width: 100%;}
   }
   .section_2 h3{margin-left:10px;}
   footer {
-    background-color: #f2f2f2; width: 95%;
+    background-color: #f2f2f2; width: 100%;
     display: flex; flex-direction: row;
     justify-content: space-between;
   }
@@ -283,7 +283,7 @@ footer li {
 /*responsive pour Ipad  */
 
 @media only screen and (min-device-width: 769px) and (max-device-width: 992px) {
-  body, header, main,footer{ margin: 0px;}
+  body, header, main, footer{ margin: 1px;}
   article img{width: 150px;}
   aside img {width:60%; }
 }
