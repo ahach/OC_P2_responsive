@@ -238,7 +238,7 @@ h2{width: 100%;}
   padding-top: 20px; align-items: center; flex-basis: 100%;
 }
 .section_2 a {display: flex; flex-shrink: 1;flex-basis: auto;
-  display: inline-block;
+  display: inline-block; width: fit-content;
   text-decoration: none; 
   color:black; 
   padding-bottom: 2px;
@@ -265,7 +265,7 @@ h2{width: 100%;}
   }
   .section_2 h3{margin-left:10px;}
   footer {
-    background-color: #f2f2f2; width: 100%;
+    background-color: #f2f2f2; width: 95%;
     display: flex; flex-direction: row;
     justify-content: space-between;
   }
