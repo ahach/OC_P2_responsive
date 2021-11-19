@@ -8,7 +8,6 @@ body {
 }
 h1, h2 {
   font-size: 1.2em;
-  text-align: justify;
 }
 
 h2 {width: 100%;}
@@ -162,7 +161,7 @@ span {
 }
 h3{font-weight: bolder; }
 h4{font-weight: normal;margin:0;}
-article h2{margin-left: 5%;}
+
 article{
   flex-basis:60%;border-radius: 15px;
   display: flex; flex-shrink: 1;
@@ -266,7 +265,7 @@ h2{width: 100%;}
   }
   .section_2 h3{margin-left:10px;}
   footer {
-    background-color: #f2f2f2; width: 90%;
+    background-color: #f2f2f2; width: 95%;
     display: flex; flex-direction: row;
     justify-content: space-between;
   }
@@ -298,18 +297,19 @@ footer li {
   .logo {
     width: 1%;
   }
+  h2{width:90%;}
   .logo img {
-    max-width: 120px; margin-bottom:30px; margin-left: 10px;
+    max-width: 120px; margin-bottom:35px; margin-left: 10px;
   }
   .navigation{width:99%;display: flex;flex-direction:row;flex-wrap: wrap-reverse;}
   .nav_1{
-      width: 100%; display: flex; flex-direction:row; flex-wrap: nowrap;justify-content: flex-start;
+      width: 100%; display: flex; flex-direction:row; flex-wrap: nowrap;justify-content: center;
     } 
     .nav_1 ul{padding:0;width: 100%; display: flex;}
     .nav_2{width:50%;margin-top:10%;}
-    .nav_2 ul{justify-content: flex-end;}
-    .nav_1 ul .hebergements{width:50%}
-    .nav_1 ul.activites{width:50%}
+    .nav_2 ul{justify-content: center;margin-right:10%;padding-left: 0;}
+    .nav_1 ul .hebergements{width:50%;}
+    .nav_1 ul.activites{width:50%; margin-left:20%;}
        
       .nav_1 a:hover, .nav_2 a:hover {
     border-bottom: solid; border-top:none;
@@ -317,15 +317,32 @@ footer li {
     border-color:#0065fc; background-color:white; color:#0065fc;
     padding-bottom: 10px;
     }
-   
-.rechercher {
-  width: 100%; justify-items: flex-start; flex-shrink: 2;
-}
+    .head_bloc_1,.head_bloc_2, footer{ max-width: 95%; margin:auto; flex-shrink: 2}
+    .slogan{margin:10px;}
 .zone_recherche{width:70%;}
- .filtre {width: 100%; margin-left : 0px; margin-right: 0px;
-  }
+.rechercher {
+  
+  justify-content: unset;
+}
+.filtre ul {padding:0;}
+.bouton{
+  display:none;
+}
+.rechercher form .fas{
+  display: flex; float: right; margin-top: 30px;
+  color:white; 
+  background-color:#0065fc;
+  margin-right: 4px; 
+  margin-top:2px; 
+  margin-bottom: 5px ; 
+  padding-top: 10px; padding-bottom: 10px;
+  padding-right: 30px; 
+  padding-left: 20px;
+  border:5px; 
+  border-radius: 10px 10px 10px 10px;
+}
   .filtre h2{width: 100%;}
-  .filtre ul { display: flex; width: 90%; margin-left : 0px;
+  .filtre ul { display: flex; width: 90%;
    flex-wrap: wrap; justify-content: space-between;
   }  
   .filtre li {margin-left: 0%;
@@ -357,7 +374,7 @@ article img
     }
 
 aside {
-  width: 100%;padding-left: 0; background-color: #f2f2f2; border-radius: 0;}
+  width: 100%;padding: 0; background-color: #f2f2f2; border-radius: 0;margin:0;}
   aside h2{max-width: 90%; display: flex; justify-content: stretch; height: 30px;}
   aside h2 .fas{margin-left:10%;}
 aside a{
@@ -392,4 +409,7 @@ footer{
   flex-direction: column; width: 100%; justify-content: space-evenly;
   text-align: left;
 }
+.filtre h2, footer h2{margin-left:0;}
+h2{margin-left:5%}
+article h2{margin-right:10%;}
 }
