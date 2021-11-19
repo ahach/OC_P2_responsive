@@ -321,8 +321,8 @@ aside {
     .nav_1 ul{padding:0;width: 100%; display: flex;}
     .nav_2{width:50%;margin-top:10%;}
     .nav_2 ul{justify-content: center;margin-right:10%;padding-left: 0;}
-    .nav_1 ul .hebergements{width:50%;}
-    .nav_1 ul.activites{width:50%; margin-left:20%;}
+    .nav_1 ul .hebergements{width:50%;margin-right: 10%;}
+    .nav_1 ul.activites{width:50%;margin-left:10%;}
        
       .nav_1 a:hover, .nav_2 a:hover {
     border-bottom: solid; border-top:none;
@@ -332,28 +332,28 @@ aside {
     }
     .head_bloc_1,.head_bloc_2, footer{ max-width: 95%; margin:auto; flex-shrink: 2}
     .slogan{margin:10px;}
+    .bouton{
+      display:none;
+    }
+    .rechercher form .fas{
+      display: flex; float: right; margin-top: 30px;
+      color:white; 
+      background-color:#0065fc;
+      margin-right: 4px; 
+      margin-top:2px; 
+      margin-bottom: 5px ; 
+      padding-top: 10px; padding-bottom: 10px;
+      padding-right: 30px; 
+      padding-left: 20px;
+      border:5px; 
+      border-radius: 10px 10px 10px 10px;
+    }
 .zone_recherche{width:70%;}
 .rechercher {
-  
   justify-content: unset;
 }
 .filtre ul {padding:0;}
-.bouton{
-  display:none;
-}
-.rechercher form .fas{
-  display: flex; float: right; margin-top: 30px;
-  color:white; 
-  background-color:#0065fc;
-  margin-right: 4px; 
-  margin-top:2px; 
-  margin-bottom: 5px ; 
-  padding-top: 10px; padding-bottom: 10px;
-  padding-right: 30px; 
-  padding-left: 20px;
-  border:5px; 
-  border-radius: 10px 10px 10px 10px;
-}
+
   .filtre h2{width: 100%;}
   .filtre ul { display: flex; width: 90%;
    flex-wrap: wrap; justify-content: space-between;
