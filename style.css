@@ -3,24 +3,24 @@ body {
   font-size: 1.2em; cursor: pointer;
   display: flex; justify-content: stretch;
   flex-direction: column;
-  flex-basis: 90%;
-  margin-left: 15px;margin-right:15px;
+  margin: 0 15px;
 }
 h1, h2 {
   font-size: 1.2em;
 }
 
-h2 {width: 100%;}
+h2 {width: 90%;}
 
 p {
   font-family:"Raleway", sans-serif; 
   font-size: 1em; color:grey;
   text-align: left;
 }
-header, main, footer {
-  display: flex; flex-shrink: 1;
-  flex-direction: column; justify-content: stretch;
-  max-width:1440px; margin: 0px auto;
+header, main,footer {
+  max-width:1440px; margin: 0px 30px;
+}
+footer {
+ margin: 0px 0px;
 }
 header{flex-basis: 100%;}
 .head_bloc_1 {
@@ -229,20 +229,19 @@ aside img {max-width:40%; margin-right: 2%; padding:1%; object-fit: cover;
   .section_1 .tout_bleu img{min-width:40%;object-fit: cover;max-height: 100%}
 aside h2 .fas{float:right;margin-bottom:10%;margin-right:10%;}
 
-h2{width: 100%;}
+
 .section_2 {
   display: flex; 
   flex-direction: row; 
   margin-bottom: 10px; 
   justify-content: space-between; flex-wrap:wrap;
-  padding-top: 20px; align-items: center; flex-basis: 100%;
+  padding-top: 20px; flex-basis: 100%;
 }
-.section_2 a {display: flex; flex-shrink: 1;flex-basis: auto;
-  display: inline-block; width: fit-content;
+.title h2{width:80%;margin-left:10px;}
+.section_2 a {display: flex; flex-shrink: 1;flex-basis: auto; flex-direction: column;
   text-decoration: none; 
   color:black; 
-  padding-bottom: 2px;
-  margin-bottom: 10px; border-width : 15px; border-radius: 20px;
+  border-width : 15px; border-radius: 20px;
   border:1px none grey; box-shadow: 5px 5px 5px #f2f2f2; }
 
 
@@ -255,25 +254,23 @@ h2{width: 100%;}
   }
   .petite_image
   {
-    display: flex; flex-direction: column;flex-shrink: 1;
+    display: flex; flex-direction: column;flex-shrink: 1; justify-content: space-between;
   }
-  .grande_image{
-    height: 490px;
-  }
+  a .grande_image{height: 100%;}
+  .petite_image a{margin-bottom:8%;}
   .section_2 .grande_image img {
     height:80%;
   }
   .section_2 h3{margin-left:10px;}
   footer {
-    background-color: #f2f2f2; width: 95%;
-    display: flex; flex-direction: row;
-    justify-content: space-between;
+    background-color: #f2f2f2;
+    display: flex; flex-direction: row; margin-top:30px; padding-right:2%;
   }
-
+  footer div{width:30%; padding-left:40px;}
 footer ul {
   list-style-type: none;
-  color: grey;
-  text-decoration: none; display: flex; flex-direction: column;padding-left: 0;
+  color: grey; padding-left: 0;
+  text-decoration: none; display: flex; flex-direction: column;
 }
 
 footer li {
@@ -284,7 +281,14 @@ footer li {
 
 @media only screen and (min-device-width: 769px) and (max-device-width: 992px) {
   body, header, main, footer{ margin: 1px;}
-  article img{width: 150px;}
+  article a{width: 100%; margin-right: 0;}
+article img
+  { max-height: 210px; width: 100%; border-width: 10px 10px 5px 0; border-radius: 20px;
+    padding-top: 0px; object-fit: cover;
+    padding-bottom: 15px;
+    padding-right: 0px; margin-bottom: 15px;
+    padding-left: 0px; margin-right: 0%;
+    }
   aside img {width:60%; }
   .section_1{
     flex-direction: column-reverse; justify-content: stretch;
@@ -299,8 +303,11 @@ footer li {
   
 aside {
   width: 100%;padding: 0; background-color: #f2f2f2; border-radius: 0;margin:0;}
+
+aside a{max-width: 100%;}
+.title h2{margin-left:20px;}
+footer .a_propos{margin-left:0%;}
 }
-  
 
 /*responsive pour plus petites résolutions inf à 769px*/
 @media all and (max-width: 768px)
@@ -330,7 +337,7 @@ aside {
     border-color:#0065fc; background-color:white; color:#0065fc;
     padding-bottom: 10px;
     }
-    .head_bloc_1,.head_bloc_2, footer{ max-width: 95%; margin:auto; flex-shrink: 2}
+    .head_bloc_1,.head_bloc_2{ max-width: 95%; margin:auto; flex-shrink: 2}
     .slogan{margin:10px;}
     .bouton{
       display:none;
@@ -391,12 +398,13 @@ aside {
   aside h2{max-width: 90%; display: flex; justify-content: stretch; height: 30px;}
   aside h2 .fas{margin-left:10%;}
 aside a{
-  text-align: left; margin-right: 10%; margin-left: 5%;
-  max-width: 470px; height: 40%;
+   margin-right: 10%; margin-left: 5%;
+  max-width: 100%; height: 40%;
 }
 .section_1 aside img{ 
   height: 200px;object-fit: cover;width: 450px;}
   .section_1 .tout_bleu img{width: 450px; } 
+  .title h2{margin-left:30px;}
 .section_2 { 
     flex-direction: column; width: 90%; justify-content: center; margin-left:7%;
      flex-basis:100%;}
@@ -419,10 +427,13 @@ aside a{
         }
        
 footer{
-  flex-direction: column; width: 100%; justify-content: space-evenly;
-  text-align: left;
+  text-align: left; flex-direction: column;
 }
+footer div{width:90%;}
 .filtre h2, footer h2{margin-left:0;}
 h2{margin-left:5%}
 article h2{margin-right:10%;}
+
+footer li {
+  width:100%;
 }
