@@ -317,7 +317,7 @@ footer .a_propos{margin-left:0%;}
   .logo {
     width: 1%;
   }
-  h2{width:90%;}
+  
   .logo img {
     max-width: 120px; margin-bottom:35px; margin-left: 10px;
   }
@@ -377,7 +377,7 @@ article {
   flex-direction: column; 
   align-items: center; background:none;
 }
-article h2{margin-left: 0%;}
+
 article a, .section_2 a
 { 
   padding-top: 0px; margin-left:0;
@@ -395,7 +395,7 @@ article img
 
 aside {
   width: 100%;padding: 0; background-color: #f2f2f2; border-radius: 0;margin:0;}
-  aside h2{max-width: 90%; display: flex; justify-content: stretch; height: 30px;}
+  aside h2{width: 90%; margin-left: 5%; display: flex; justify-content: stretch; height: 30px;}
   aside h2 .fas{margin-left:10%;}
 aside a{
    margin-right: 10%; margin-left: 5%;
@@ -431,9 +431,9 @@ footer{
 }
 footer div{width:90%;}
 .filtre h2, footer h2{margin-left:0;}
-h2{margin-left:5%}
-article h2{margin-right:10%;}
+article h2{margin-right:7%;}
 
 footer li {
   width:100%;
+}
 }
