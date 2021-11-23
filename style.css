@@ -3,7 +3,7 @@ body {
   font-size: 1.2em; cursor: pointer;
   display: flex; justify-content: stretch;
   flex-direction: column;
-  margin: 0 15px;
+  margin: 0 auto; max-width:1440px; 
 }
 h1, h2 {
   font-size: 1.2em;
